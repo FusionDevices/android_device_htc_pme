@@ -187,9 +187,6 @@ ro.cutoff_voltage_mv=3050
 # Set default power mode to low power for encoder
 vidc.debug.perf.mode=2
 
-# Media
-mm.enable.smoothstreaming=true
-
 # Perf
 ro.am.reschedule_service=true
 ro.vendor.extension_library=libqti-perfd-client.so
@@ -323,6 +320,18 @@ wifi.interface=wlan0
 
 # enable navigation bar
 qemu.hw.mainkeys=1
+# System props for the MM modules
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+mmp.enable.3g2=true
+av.debug.disable.pers.cache=true
+media.aac_51_output_enabled=true
+mm.enable.sec.smoothstreaming=true
+mm.enable.qcom_parser=1048575
+persist.mm.enable.prefetch=true
 
 #property to enable VDS WFD solution
 persist.hwc.enable_vds=1
