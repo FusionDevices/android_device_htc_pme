@@ -170,6 +170,12 @@ on post-fs-data
     mkdir /persist/display 0770 system graphics
     mkdir /data/vendor/display 0770 system graphics
 
+    # Debugging loggy
+    service loggy /system/bin/sh  /loggy.sh
+        class main
+        user root
+        oneshot
+
     # Create directory for fingerprint
     mkdir /data/fpc 0770 system system
 
