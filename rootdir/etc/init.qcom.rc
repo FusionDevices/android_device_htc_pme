@@ -553,7 +553,7 @@ on property:sys.shutdown.requested=*
 service perfd /system/vendor/bin/perfd
    class main
    user root
-   group root system
+   group root system readproc
    writepid /dev/cpuset/system-background/tasks
 
 service iop /system/bin/iop
