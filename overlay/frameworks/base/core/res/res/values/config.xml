@@ -258,6 +258,7 @@
     -->
     <integer name="config_longPressOnHomeBehavior">0</integer>
 
+
     <!-- Flag specifying whether WFC over IMS is available on device -->
     <bool name="config_device_wfc_ims_available">true</bool>
 
@@ -265,6 +266,14 @@
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
     <bool name="config_carrier_wfc_ims_available">true</bool>
+
+    <!-- The list absolute paths of jar/apk files containing the device specific handlers,
+         delimited by File.pathSeparator, which defaults to ":" on Android -->
+    <string name="config_deviceKeyHandlerLib" translatable="false">/system/framework/com.cyanogenmod.keyhandler.jar</string>
+
+    <!-- Full qualified name of the class that implements
+         com.android.internal.os.DeviceKeyHandler interface. -->
+    <string name="config_deviceKeyHandlerClass" translatable="false">com.cyanogenmod.settings.device.KeyHandler</string>
 
     <!-- Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
