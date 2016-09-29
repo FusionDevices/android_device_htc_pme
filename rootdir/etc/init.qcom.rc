@@ -445,17 +445,25 @@ service fingerprintd /system/bin/fingerprintd
     group system input
     writepid /dev/cpuset/system-background/tasks
 
+service htcdcpd /system/bin/htcdcpd
+    class main
+    user root
+    group root
+    writepid /dev/cpuset/system-background/tasks
+
 service hvdcp_opti /system/bin/hvdcp_opti
     class main
     user root
     group root
+    writepid /dev/cpuset/system-background/tasks
 
 service ims_rtp_daemon /system/bin/ims_rtp_daemon
-   class main
-   user system
-   socket ims_rtpd stream 0660 system radio
-   group radio net_raw diag diag inet log
-   disabled
+    class main
+    user system
+    socket ims_rtpd stream 0660 system radio
+    group radio net_raw diag diag inet log
+    disabled
+    writepid /dev/cpuset/system-background/tasks
 
 on property:sys.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
