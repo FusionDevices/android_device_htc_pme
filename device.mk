@@ -113,9 +113,10 @@ APTX_HD := true
 
 # Camera
 PRODUCT_PACKAGES += \
-    libshim_camera \
     android.hardware.camera.provider@2.4-impl \
-    camera.device@3.2-impl
+    camera.device@3.2-impl \
+    libcameraface \
+    libshim_camera
 
 TARGET_USES_GOOGLE_CAMERA := true
 #TARGET_USES_OP_CAMERA := true
