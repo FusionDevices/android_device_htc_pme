@@ -279,6 +279,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
 
+# Virtual Reality
+PRODUCT_PACKAGES += \
+    vr.msm8996
+
 # Wifi
 PRODUCT_PACKAGES += \
     libwpa_client \
