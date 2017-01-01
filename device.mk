@@ -268,9 +268,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjson
 
+# Ril
 PRODUCT_PACKAGES += \
     libhtcril_db \
-    libprotobuf-cpp-full \
     librmnetctl \
     libshim_ril \
     libxml2
