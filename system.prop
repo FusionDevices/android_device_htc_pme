@@ -97,7 +97,7 @@ ro.qti.sensors.mot_detect=false
 ro.qualcomm.ssc=true
 
 # Storage
-ro.sys.sdcardfs=true
+#ro.sys.sdcardfs=true
 
 # Time-services
 persist.timed.enable=true
