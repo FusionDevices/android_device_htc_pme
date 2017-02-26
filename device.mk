@@ -178,8 +178,10 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     ueventd.qcom.rc \
     init.qcom.sh \
-	init.rc \
     init.qcom.firmware_links.sh
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.rc:root/init.rc
 
 # Input
 PRODUCT_COPY_FILES += \
