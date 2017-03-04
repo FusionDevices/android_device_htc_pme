@@ -175,6 +175,9 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 BOARD_NFC_CHIPSET := pn548
 TARGET_USES_NQ_NFC := true
 
+# Enable dex-preoptimization to speed up first boot sequence
+WITH_DEXPREOPT := true
+
 # Power
 TARGET_POWERHAL_VARIANT := voxpopuli
 TARGET_USES_INTERACTION_BOOST := true
