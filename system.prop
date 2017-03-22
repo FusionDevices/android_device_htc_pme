@@ -76,6 +76,9 @@ ro.baseband.arch=msm
 ro.telephony.call_ring.multiple=false
 ro.ril.telephony.mqanelements=5
 
+# NFC
+ro.nfc.port=I2C
+
 # RmNet Data
 persist.rmnet.data.enable=true
 persist.data.wda.enable=true
