@@ -142,6 +142,10 @@ PRODUCT_PACKAGES += \
 # PRODUCT_PACKAGES += \
 #    GestureHandler
 
+# Doze
+ PRODUCT_PACKAGES += \
+     Doze
+     
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8996 \
