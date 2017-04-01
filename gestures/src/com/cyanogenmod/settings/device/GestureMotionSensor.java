@@ -15,6 +15,7 @@
  */
 
 package com.cyanogenmod.settings.device;
+
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -26,7 +27,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.cyanogenmod.internal.util.FileUtils;
+import com.cyanogenmod.settings.device.util.FileUtils;
 
 public class GestureMotionSensor {
 

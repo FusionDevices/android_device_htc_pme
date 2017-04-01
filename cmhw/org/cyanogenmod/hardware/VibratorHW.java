@@ -16,7 +16,7 @@
 
 package org.cyanogenmod.hardware;
 
-import org.cyanogenmod.internal.util.FileUtils;
+import org.cyanogenmod.hardware.util.FileUtils;
 import java.io.File;
 
 public class VibratorHW {
@@ -55,4 +55,3 @@ public class VibratorHW {
         return FileUtils.writeLine(AMP_PATH, String.valueOf(intensity));
     }
 }
-

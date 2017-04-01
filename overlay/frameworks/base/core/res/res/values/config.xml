@@ -106,6 +106,7 @@
     <bool name="config_intrusiveNotificationLed">true</bool>
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+    <add-resource type="bool" name="config_intrusiveBatteryLed"></add-resource>
     <bool name="config_intrusiveBatteryLed">true</bool>
 
     <!-- reference volume index for music stream to limit headphone volume and display warning -->
@@ -118,7 +119,7 @@
     <!-- Defines the shutdown options shown in the reboot dialog. -->
         <array name="shutdown_reboot_options" translatable="false">
         <item>@string/reboot_reboot</item>
-        <item>@string/reboot_soft</item>
+        <item>@string/reboot_bootloader</item>
         <item>@string/reboot_recovery</item>
         <item>@string/reboot_download</item>
     </array>
@@ -127,7 +128,7 @@
          The first item should be empty for regular reboot. -->
     <string-array name="shutdown_reboot_actions" translatable="false">
         <item></item>
-        <item>soft_reboot</item>
+        <item>bootloader</item>
         <item>recovery</item>
         <item>download</item>
     </string-array>
@@ -245,6 +246,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
+    <add-resource type="integer" name="config_deviceHardwareKeys"></add-resource>
     <integer name="config_deviceHardwareKeys">83</integer>
 
     <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
@@ -259,6 +261,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
+    <add-resource type="integer" name="config_deviceHardwareWakeKeys"></add-resource>
     <integer name="config_deviceHardwareWakeKeys">64</integer>
 
 	<!-- Control the behavior when the user long presses the home button.
@@ -357,4 +360,8 @@
 
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
     <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
+
+    <!-- Whether to intercept inputs on screen off. -->
+    <add-resource type="bool" name="config_enableKeyHandler"></add-resource>
+    <bool name="config_enableKeyHandler">true</bool>
 </resources>

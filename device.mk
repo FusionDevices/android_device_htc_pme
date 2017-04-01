@@ -138,13 +138,9 @@ PRODUCT_PACKAGES += \
     fingerprint.msm8996 \
     fingerprintd
 
-# FlipFlap
-PRODUCT_PACKAGES += \
-    FlipFlap
-
 # Gesture Handler
-PRODUCT_PACKAGES += \
-    GestureHandler
+# PRODUCT_PACKAGES += \
+#    GestureHandler
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -294,7 +290,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hostapd.deny:system/etc/hostapd/hostapd.deny \
     $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
-
-# KeyHandler
-PRODUCT_PACKAGES += \
-    com.cyanogenmod.keyhandler
