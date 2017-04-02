@@ -372,4 +372,12 @@
     <!-- Whether to intercept inputs on screen off. -->
     <add-resource type="bool" name="config_enableKeyHandler"></add-resource>
     <bool name="config_enableKeyHandler">true</bool>
+    
+    <!-- Flag specifying whether VoLTE & VT is available on device -->
+    <bool name="config_device_volte_available">true</bool>
+ 
+     <!-- Flag specifying whether VoLTE should be available for carrier: independent of
+          carrier provisioning. If false: hard disabled. If true: then depends on carrier
+          provisioning, availability etc -->
+     <bool name="config_carrier_volte_available">true</bool>
 </resources>
