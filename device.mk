@@ -139,8 +139,8 @@ PRODUCT_PACKAGES += \
     fingerprintd
 
 # Gesture Handler
-# PRODUCT_PACKAGES += \
-#    GestureHandler
+PRODUCT_PACKAGES += \
+   GestureHandler
 
 # Doze
  PRODUCT_PACKAGES += \
