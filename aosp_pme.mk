@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright 2017 Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,7 +20,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Device identifier. This must come after all inclusions
+# Inherit some common AOSP stuff.
+$(call inherit-product, vendor/aosp/common.mk)
+
 PRODUCT_DEVICE := pme
-PRODUCT_NAME := full_pme
+PRODUCT_NAME := aosp_pme
+PRODUCT_BRAND := HTC
+PRODUCT_MODEL := HTC 10
+PRODUCT_MANUFACTURER := HTC
+PRODUCT_RELEASE_NAME := pme
 
 $(call inherit-product-if-exists, vendor/htc/pme/pme-vendor.mk)
+TARGET_VENDOR := htc
