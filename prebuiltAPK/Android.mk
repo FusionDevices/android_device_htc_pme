@@ -1,0 +1,17 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE_TAGS := optional
+
+LOCAL_MODULE := prebuiltAPK
+
+LOCAL_CERTIFICATE := shared
+
+LOCAL_SRC_FILES := substratum.apk
+
+LOCAL_MODULE_CLASS := APPS
+
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+
+include $(BUILD_PREBUILT)
