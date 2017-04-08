@@ -146,6 +146,10 @@ PRODUCT_PACKAGES += \
 # Doze
  PRODUCT_PACKAGES += \
      Doze
+
+# OEM Unlock reporting
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.oem_unlock_supported=1    
      
 # GPS
 PRODUCT_PACKAGES += \
