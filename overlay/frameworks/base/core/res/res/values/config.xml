@@ -381,4 +381,8 @@
           carrier provisioning. If false: hard disabled. If true: then depends on carrier
           provisioning, availability etc -->
      <bool name="config_carrier_volte_available">true</bool>
+
+    <!-- If this is true, device supports Sustained Performance Mode. -->
+    <bool name="config_sustainedPerformanceModeSupported">true</bool>
+  
 </resources>
