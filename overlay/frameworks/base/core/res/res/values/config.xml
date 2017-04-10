@@ -24,7 +24,7 @@
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
-    <bool name="config_showNavigationBar">true</bool>
+    <bool name="config_showNavigationBar">false</bool>
 
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
@@ -568,7 +568,7 @@
     <bool name="config_pinnerCameraApp">true</bool>
 
     <!-- Enable system navigation keys. -->
-    <bool name="config_supportSystemNavigationKeys">true</bool>
+    <bool name="config_supportSystemNavigationKeys">false</bool>
     
 >>>>>>> af90d4a... overlay: core: Inline with Marlin's config <Not sure if will work>
     <!-- Whether to intercept inputs on screen off. -->
