@@ -195,6 +195,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/htc/pme/releasetools
 
 # RIL
 # TARGET_RIL_VARIANT := caf
+PROTOBUF_SUPPORTED := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
