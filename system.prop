@@ -39,6 +39,25 @@ qcom.hw.aac.encoder=true
 # Bluetooth
 ro.bt.bdaddr_path=/sys/module/htc_bdaddress/parameters/bdaddress
 persist.bt.enableAptXHD=true
+service.brcm.bt.wbs = 1
+ro.htc.bluetooth.uart_dump = /sys/kernel/debug/ipc_logging/7570000.uart/log
+htc.scanrecorder = 1
+# System prop for Bluetooth SOC type
+qcom.bluetooth.soc=rome
+# System prop for wipower support
+ro.bluetooth.wipower=true
+# System property for maximum number of HFP client connections
+bt.max.hfpclient.connections=1
+# Set this true as ROME which is programmed
+# as embedded wipower mode by deafult
+ro.bluetooth.emb_wp_mode=true
+# Hardware info - Bluetooth
+ro.bt.chipset = Broadcom BCM4359
+ro.bt.profiles = 12806147
+ro.bt.stack.version = 3.0
+ro.bt.stack = Broadcom AFBT
+ro.bt.version = 4.2
+ro.product.bluetooth = 4.2
 
 # Camera
 camera2.portability.force_api=1
@@ -55,7 +74,7 @@ persist.cne.rat.wlan.chip.oem=nqc
 persist.dpm.feature=0
 
 #system prop for enabling/disabling Android XLAT
-persist.net.doxlat=true
+persist.net.doxlat=false
 
 #system props for the MM modules
 media.stagefright.enable-player=true
@@ -76,9 +95,6 @@ persist.mm.enable.prefetch=true
 
 # Additional i/p buffer in case of encoder DCVS
 vidc.enc.dcvs.extra-buff-count=2
-
-# Set default power mode to low power for encoder
-vidc.debug.perf.mode=2
 
 #
 # system props for the data modules
@@ -112,8 +128,32 @@ ro.qualcomm.cabl=2
 # System prop to turn on CdmaLTEPhone always
 telephony.lteOnCdmaDevice=1
 
-ro.sf.lcd_density=640
+ro.sf.lcd_density=560
 sdm.perf_hint_window=50
+ro.product.display_resolution = 5.2 inch WQHD resolution
+
+# Disable face beautification
+persist.ts.postmakeup=false
+persist.ts.rtmakeup=false
+
+# Disable rotator split feature
+sdm.debug.disable_rotator_split=1
+
+# Disable PQ feature by default
+vidc.enc.disable.pq=true
+
+# Enable fill EONS
+persist.radio.fill_eons=1
+
+# Enable stm events
+persist.debug.coresight.config=stm-events
+
+
+# For usb storage
+ro.usb_host = 1
+
+# Google Assistant
+ro.opa.eligible_device=true
 
 # DRM
 drm.service.enabled=true
@@ -126,6 +166,15 @@ persist.fuse_sdcard=true
 persist.gps.qc_nlp_in_use=1
 persist.loc.nlp_name=com.qualcomm.location
 ro.gps.agps_provider=1
+
+# HTC Battery
+# Enable HVDCP Vbus Optimation
+persist.hvdcp.allow_opti=1
+# For framework shutdown at low battery voltage
+ro.cutoff_voltage_mv=3050
+
+# Set default power mode to low power for encoder
+vidc.debug.perf.mode=2
 
 # Media
 mm.enable.smoothstreaming=true
@@ -140,7 +189,7 @@ ro.vendor.extension_library=libqti-perfd-client.so
 ro.qc.sdk.audio.ssr=false
 
 ##fluencetype can be "fluence" or "fluencepro" or "none"
-ro.qc.sdk.audio.fluencetype=none
+ro.qc.sdk.audio.fluencetype=fluence
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=true
@@ -280,7 +329,7 @@ sdm.debug.disable_rotator_split=1
 #Increase cached app limit
 ro.sys.fw.bg_apps_limit=60
 
-# Factory Reset Protection
+# Factory Reset Protection *** KEEP OFF ***
 # ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Fast charge
