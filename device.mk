@@ -78,8 +78,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/adblocker:system/bin/adblocker
     
-PRODUCT_PACKAGES += \
-     prebuiltAPK
+#PRODUCT_PACKAGES += \
+#     prebuiltAPK
 
 # Audio
 PRODUCT_PACKAGES += \
