@@ -10,6 +10,8 @@ binder_use(camera)
 binder_call(camera, system_server)
 binder_call(camera, cameraserver)
 allow camera system_server:unix_stream_socket { read write };
+allow camera hal_renderscript_hwservice:hwservice_manager find;
+
 
 allow camera ion_device:chr_file rw_file_perms;
 allow camera camera_device:chr_file rw_file_perms;
