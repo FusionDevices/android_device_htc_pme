@@ -111,6 +111,7 @@ BOARD_CUSTOM_BT_CONFIG := $(DEVICE_PATH)/bluetooth/libbt_vndcfg.txt
 # Camera
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_ext
 USE_DEVICE_SPECIFIC_CAMERA := true
+target_has_legacy_camera_hal1:=true
 
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true

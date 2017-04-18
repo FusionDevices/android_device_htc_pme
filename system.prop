@@ -61,8 +61,12 @@ ro.product.bluetooth = 4.2
 
 # Camera
 camera2.portability.force_api=1
+persist.camera.HAL3.enabled=1
 persist.ts.postmakeup=false
 persist.ts.rtmakeup=false
+
+#force HAL1 for below packages
+camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 
 #Camera fullscreen doesn't show navigation bar
 Camera.no_navigation_bar=true
@@ -83,6 +87,7 @@ media.stagefright.enable-aac=true
 media.stagefright.enable-qcp=true
 media.stagefright.enable-fma2dp=true
 media.stagefright.enable-scan=true
+media.stagefright.legacyencoder=true
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
 mm.enable.sec.smoothstreaming=true
