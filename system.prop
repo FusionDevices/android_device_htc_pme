@@ -65,8 +65,14 @@ persist.camera.HAL3.enabled=1
 persist.ts.postmakeup=false
 persist.ts.rtmakeup=false
 
+# persist.camera.gyro.disable=0
+# persist.camera.preview.ubwc=0
+# persist.camera.video.ubwc=0
+# persist.camera.stats.test=5
+# camera.disable_zsl_mode=1
+
 #force HAL1 for below packages
-camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+#camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 
 #Camera fullscreen doesn't show navigation bar
 Camera.no_navigation_bar=true
