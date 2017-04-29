@@ -170,7 +170,9 @@ BOARD_NFC_CHIPSET := pn548
 TARGET_USES_NQ_NFC := true
 
 # Power
-TARGET_POWERHAL_VARIANT := qcom
+TARGET_POWERHAL_VARIANT := voxpopuli
+TARGET_USES_INTERACTION_BOOST := true
+-include device/voxpopuli/sepolicy/sepolicy.mk
 
 # Qualcomm
 BOARD_USES_QCOM_HARDWARE := true
