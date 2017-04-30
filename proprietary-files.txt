@@ -866,7 +866,7 @@ bin/energy-awareness
 bin/iop
 bin/msm_irqbalance
 lib64/libqti-iop.so
-vendor/bin/perfd|dcb9dc3b552972110dab04339255ce2ebee9463e
+vendor/bin/perfd|01f3154ec4e8bbfc726cbda152689693b91cba71
 vendor/lib64/libqti-iop-client.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib/libqti-iop-client.so
