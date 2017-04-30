@@ -133,6 +133,7 @@ on enable-low-power
 
     # Set perfd properties
     setprop sys.post_boot.parsed 1
+    start perfd
 
     # Starting io prefetcher service
     start iop
