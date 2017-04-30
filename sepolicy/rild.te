@@ -1,1 +1,7 @@
+binder_use(rild)
+binder_call(rild, audioserver)
+binder_call(rild, per_mgr)
+
+allow rild carrier_file:dir search;
+allow rild carrier_file:file r_file_perms;
 allow rild radio_data_file:dir rw_dir_perms;

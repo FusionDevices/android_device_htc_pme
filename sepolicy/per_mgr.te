@@ -1,1 +1,4 @@
+binder_use(per_mgr)
+binder_call(per_mgr, system_server)
+binder_call(per_mgr, rild)
 allow per_mgr self:capability net_raw;
