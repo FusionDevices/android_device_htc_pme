@@ -10,7 +10,7 @@ on boot
     write /dev/cpuset/background/cpus 0-3
     write /dev/cpuset/system-background/cpus 0-3
 
-   # set default schedTune value for foreground/top-app (only affects EAS)
+    # set default schedTune value for foreground/top-app (only affects EAS)
     write /dev/stune/foreground/schedtune.prefer_idle 1
     write /dev/stune/foreground/schedtune.boost 0
     write /dev/stune/background/schedtune.boost 0
@@ -22,13 +22,13 @@ on boot
 
     # Set Power HAL tunables
     write /dev/voxpopuli/enable_interaction_boost   1
-    write /dev/voxpopuli/fling_min_boost_duration   200
+    write /dev/voxpopuli/fling_min_boost_duration   250
     write /dev/voxpopuli/fling_max_boost_duration   2500
     write /dev/voxpopuli/fling_boost_topapp         10
     write /dev/voxpopuli/fling_min_freq_big         1113
     write /dev/voxpopuli/fling_min_freq_little      1113
-    write /dev/voxpopuli/touch_boost_duration       200
-    write /dev/voxpopuli/touch_boost_topapp         5
+    write /dev/voxpopuli/touch_boost_duration       250
+    write /dev/voxpopuli/touch_boost_topapp         0
     write /dev/voxpopuli/touch_min_freq_big         1036
     write /dev/voxpopuli/touch_min_freq_little      1036
     chmod 0644 /dev/voxpopuli/enable_interaction_boost
@@ -65,14 +65,15 @@ on boot
     write /proc/sys/kernel/sched_boost 1
 
 on enable-low-power
-
-    # Disable thermal bcl hotplug to switch governor
+    # Disable thermal & BCL core_control to update interactive gov settings
     write /sys/module/msm_thermal/core_control/enabled 0
     write /sys/devices/soc/soc:qcom,bcl/mode "disable"
     write /sys/devices/soc/soc:qcom,bcl/hotplug_mask 0
     write /sys/devices/soc/soc:qcom,bcl/hotplug_soc_mask 0
     write /sys/devices/soc/soc:qcom,bcl/mode "enable"
 
+    # Enable Adaptive LMK
+    write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
     write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 81250
 
     # Configure governor settings for little cluster
@@ -113,7 +114,7 @@ on enable-low-power
     # EAS: Capping the max frequency of silver core to 1.6GHz
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1593600
 
-    # Switch to schedutil governor - Only has effect if EAS is enabled
+    # if EAS is present, switch to schedutil governor (no effect if not EAS)
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "schedutil"
 
@@ -121,12 +122,12 @@ on enable-low-power
     write /sys/module/msm_thermal/core_control/enabled 1
     write /sys/devices/soc/soc:qcom,bcl/mode "disable"
     write /sys/devices/soc/soc:qcom,bcl/hotplug_mask 12
-    write /sys/devices/soc/soc:qcom,bcl/hotplug_soc_mask 8
+    write /sys/devices/soc/soc:qcom,bcl/hotplug_soc_mask 15
     write /sys/devices/soc/soc:qcom,bcl/mode "enable"
 
     # Input boost configuration
-    write /sys/kernel/cpu_input_boost/ib_freqs "1190400 1190400"
-    write /sys/kernel/cpu_input_boost/ib_duration_ms 40
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800 2:1324800"
+    write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
     # Setting b.L scheduler parameters
     write /proc/sys/kernel/sched_boost 0
@@ -159,26 +160,19 @@ on enable-low-power
     write /sys/class/devfreq/soc:qcom,memlat-cpu2/polling_interval 10
     write /sys/class/devfreq/soc:qcom,mincpubw/governor "cpufreq"
 
-    # Set perfd properties
-    setprop sys.post_boot.parsed 1
-    start perfd
-
-    # Starting io prefetcher service
-    start iop
-
-    # VM tuning
-	write /proc/sys/vm/dirty_background_ratio 20
-	write /proc/sys/vm/dirty_expire_centisecs 200
-	write /proc/sys/vm/dirty_ratio 40
-	write /proc/sys/vm/swappiness 0
-	write /proc/sys/vm/vfs_cache_pressure 100
-
-    # Enable all low power modes
     write /sys/module/lpm_levels/parameters/sleep_disabled "N"
 
     # Set idle GPU to 133 Mhz
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 6
 
+    # Set perfd properties
+    setprop sys.post_boot.parsed 1
+    
+    # Start perfd after all properties have been properly set
+    start perfd
+
+    # Starting io prefetcher service
+    start iop
 
 on charger
     write /sys/devices/system/cpu/cpu1/online 0
@@ -198,10 +192,10 @@ on property:init.svc.recovery=running
     trigger enable-low-power
 
 on property:dev.bootcomplete=1
-    write /proc/sys/kernel/sched_boost 0
+    setprop sys.io.scheduler "deadline"
     # update cpusets now that boot is complete and we want better load balancing
     write /dev/cpuset/top-app/cpus 0-3
-    write /dev/cpuset/foreground/boost/cpus 0-1,3
-    write /dev/cpuset/foreground/cpus 0-1,3
+    write /dev/cpuset/foreground/boost/cpus 0-2
+    write /dev/cpuset/foreground/cpus 0-2
     write /dev/cpuset/background/cpus 0
-    write /dev/cpuset/system-background/cpus 0-1,3
+    write /dev/cpuset/system-background/cpus 0-2
