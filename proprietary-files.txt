@@ -871,6 +871,7 @@ vendor/lib64/libqti-iop-client.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib/libqti-iop-client.so
 vendor/lib/libqti-perfd-client.so
+vendor/etc/perf-profile0.conf
 
 # Peripheral manager
 bin/pm-proxy
