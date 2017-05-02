@@ -865,13 +865,20 @@ vendor/lib64/libQtiTether.so
 bin/energy-awareness
 bin/iop
 bin/msm_irqbalance
-lib64/libqti-iop.so
+vendor/lib/libqti-iop.so
+vendor/lib64/libqti-iop.so
 vendor/bin/perfd|01f3154ec4e8bbfc726cbda152689693b91cba71
 vendor/lib64/libqti-iop-client.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib/libqti-iop-client.so
 vendor/lib/libqti-perfd-client.so
+vendor/lib/libqti-iop.so
 vendor/etc/perf-profile0.conf
+
+-vendor/lib64/libqti_performance.so
+-vendor/lib/libqti_performance.so
+-framework/QPerformance.jar
+-etc/permissions/com.qualcomm.qti.Performance.xml
 
 # Peripheral manager
 bin/pm-proxy
