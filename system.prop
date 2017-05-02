@@ -60,8 +60,8 @@ ro.bt.version = 4.2
 ro.product.bluetooth = 4.2
 
 # Camera
-#camera2.portability.force_api=1
-persist.camera.HAL3.enabled=1
+camera.disable_zsl_mode=1
+camera2.portability.force_api=1
 persist.ts.postmakeup=false
 persist.ts.rtmakeup=false
 
