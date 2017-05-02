@@ -1,7 +1,18 @@
 [
   {
-    "repository": "android_kernel_htc_msm8996",
-    "target_path": "kernel/htc/msm8996"
+    "repository": "tabp0le/android_kernel_htc_msm8996",
+    "target_path": "kernel/htc/msm8996",
+    "branch": "n7x-tabp0le-eas"
+  },
+  {
+    "repository": "tabp0le/proprietary_vendor_htc",
+    "target_path": "vendor/htc",
+    "branch": "n7x-eas"
+  },
+  {
+    "repository": "EAS-Project/android_device_voxpopuli",
+    "target_path": "device/voxpopuli",
+    "branch": "msm8996"
   },
  {
    "repository": "android_device_qcom_common",
