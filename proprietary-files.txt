@@ -655,7 +655,7 @@ framework/izat.xt.srv.jar|da31c6183f8d29251ce5656ddab6d4b386934382
 -lib64/libloc_api_v02.so|bc224bffbd48028409f60fcfa59024ec57adfdf6
 lib64/libloc_ds_api.so|3597ccb6fe31fe2bac34dbf0c8e3fc582666af2f
 -priv-app/com.qualcomm.location/com.qualcomm.location.apk|af49810b5afea665db765726519e246297fe3f26
-vendor/bin/slim_daemon|8ffbe40e0fd557d1300ee43ed8f5aab3dd08f8ba
+vendor/bin/slim_daemon|29c46569a7d6d7820b91d3506a2cbd0fcdaebbf4
 vendor/lib64/hw/flp.default.so|1604238d1259a9472c594e87422d8503a584b6fe
 vendor/lib64/libalarmservice_jni.so|124ab205b93f0e8942325ffce5516b1e18bf92d7
 vendor/lib64/libasn1cper.so|94c38bc6e4c79a6f24a53f223f8ca66108876723
@@ -690,7 +690,7 @@ vendor/lib/egl/libGLESv1_CM_adreno.so|c42c9368df2bc74263638cb96aea1ded8aefc19e
 vendor/lib/egl/libGLESv2_adreno.so|e63df84a0f39337b161321b7873ae00276968546
 vendor/lib/egl/libQTapGLES.so|0f78442ce7595ddc039f967dd057e5ce8eb790c0
 vendor/lib/egl/libq3dtools_adreno.so|11cfe167842ef4b5d35781497a6170b38ec138cd
-vendor/lib/hw/vulkan.msm8996.so|0b69fd00ce1e3da65105e57b35ef17c78fe103d2
+vendor/lib/hw/vulkan.msm8996.so|571c90192e172f55b99ea8a9a09da1ee6309be27
 vendor/lib/libC2D2.so|0086445b7118c6be88bef159fb1d901a1d4c9bf8
 vendor/lib/libCB.so|cbbe835f721060a1a9de8087b03402a973366da4
 vendor/lib/libOpenCL.so|9979863bcd10e3d47b9490dbfd9ed6e64b6d7f9a
@@ -716,7 +716,7 @@ vendor/lib64/egl/libGLESv1_CM_adreno.so|9fe93b8b8fcf816b6caef6a789c78891801c6ffa
 vendor/lib64/egl/libGLESv2_adreno.so|808f8b974cdaa7cd64b5c445b1a6cd36b481123d
 vendor/lib64/egl/libQTapGLES.so|1ddbb892ec1d78bf141bd7d4ad1ff65ea420d560
 vendor/lib64/egl/libq3dtools_adreno.so|b0ed8fc7863f98c4736d3fefeb6bf7e6ed709968
-vendor/lib64/hw/vulkan.msm8996.so|f4aa9246941c864ab186910e6ccff844b70e5c19
+vendor/lib64/hw/vulkan.msm8996.so|9947109c50a4dd956d6cf8b8567fd5b3008faef8
 vendor/lib64/libC2D2.so|61b5eb003dc56b03fa597ac0fcd5c702109c78cb
 vendor/lib64/libCB.so|453cf3e1e5990008ab3483d4fc0a2fa421b6b02b
 vendor/lib64/libOpenCL.so|03deb281b2719e8c95a692d7ca8eed1faf435e92
@@ -827,7 +827,7 @@ vendor/lib/hw/keystore.msm8996.so
 vendor/lib64/hw/keystore.msm8996.so
 
 # Listen
-vendor/lib/hw/sound_trigger.primary.msm8996.so
+vendor/lib/hw/sound_trigger.primary.msm8996.so|3a28da3c2fc9c368ce04b141193102e9a3af38f4
 vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 
@@ -951,7 +951,7 @@ etc/permissions/qcrilhook.xml
 framework/qcrilhook.jar
 lib64/libhtc_rilhook.so
 lib64/librilqmiservices.so
-vendor/bin/qti
+vendor/bin/qti|4610bc1b5a38b66fa9beba46650ff93b176ff0a9
 vendor/lib/libmdmdetect.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
@@ -1008,7 +1008,7 @@ vendor/lib64/sensor_calibrate.so
 
 # Thermal
 etc/thermal-engine.conf
-vendor/bin/thermal-engine
+vendor/bin/thermal-engine|d166c7768ab77f4ee18488271479449ef0db924c
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
