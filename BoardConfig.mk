@@ -116,7 +116,11 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 # Camera
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_ext
 USE_DEVICE_SPECIFIC_CAMERA := true
-# target_has_legacy_camera_hal1:=true
+
+# Force camera module to be compiled only in 32-bit mode on 64-bit systems
+# Once camera module can run in the native mode of the system (either
+# 32-bit or 64-bit), the following line should be deleted
+BOARD_QTI_CAMERA_32BIT_ONLY := true
 
 # CNE and DPM
 BOARD_USES_QCNE := true
