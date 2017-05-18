@@ -18,6 +18,11 @@ on init
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
 
+    # Enable sched boost
+    write /proc/sys/kernel/sched_boost 1
+
+on boot
+
     # set default schedTune value for foreground/top-app (only affects EAS)
     write /dev/stune/foreground/schedtune.prefer_idle 1
     write /dev/stune/foreground/schedtune.boost 0
@@ -59,9 +64,6 @@ on init
     chown system system /dev/voxpopuli/touch_boost_topapp      
     chown system system /dev/voxpopuli/touch_min_freq_big      
     chown system system /dev/voxpopuli/touch_min_freq_little
-
-    # Enable sched boost
-    write /proc/sys/kernel/sched_boost 1
 
 on enable-low-power
     # Disable thermal & BCL core_control to update interactive gov settings
