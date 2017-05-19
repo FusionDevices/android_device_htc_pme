@@ -66,7 +66,6 @@ on boot
     write /dev/voxpopuli/touch_min_freq_big         820
     write /dev/voxpopuli/touch_min_freq_little      1036
 
-on enable-low-power
     # Disable thermal & BCL core_control to update interactive gov settings
     write /sys/module/msm_thermal/core_control/enabled 0
     write /sys/devices/soc/soc:qcom,bcl/mode "disable"
@@ -169,6 +168,7 @@ on enable-low-power
     # Set idle GPU to 133 Mhz
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 6
 
+on enable-low-power
     # Set perfd properties
     setprop sys.post_boot.parsed 1
     
