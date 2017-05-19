@@ -23,8 +23,7 @@ audio.offload.track.enable=false
 audio.deep_buffer.media=true
 #enable voice path for PCM VoIP by default
 use.voice.path.for.pcm.voip=true
-#Enable multi channel aac through offload
-audio.offload.multiaac.enable=true
+audio.offload.multiaac.enable=false
 audio.offload.passthrough=false
 audio.offload.multiple.enabled=false
 # snapdragon value add features
@@ -269,5 +268,5 @@ persist.sys.wfd.virtual=0
 #sdm.debug.downscale_external=1
 
 # Enable ADB at boot time for debugging:
-persist.service.adb.enable=1                                                    
+persist.service.adb.enable=1
 persist.service.debuggable=1
