@@ -2,6 +2,27 @@ on init
     # Create Power HAL tunables
     mkdir /dev/voxpopuli 0555 system system
 
+    chmod 0644 /dev/voxpopuli/enable_interaction_boost
+    chmod 0644 /dev/voxpopuli/fling_min_boost_duration
+    chmod 0644 /dev/voxpopuli/fling_max_boost_duration
+    chmod 0644 /dev/voxpopuli/fling_boost_topapp      
+    chmod 0644 /dev/voxpopuli/fling_min_freq_big      
+    chmod 0644 /dev/voxpopuli/fling_min_freq_little   
+    chmod 0644 /dev/voxpopuli/touch_boost_duration    
+    chmod 0644 /dev/voxpopuli/touch_boost_topapp      
+    chmod 0644 /dev/voxpopuli/touch_min_freq_big      
+    chmod 0644 /dev/voxpopuli/touch_min_freq_little   
+    chown system system /dev/voxpopuli/enable_interaction_boost
+    chown system system /dev/voxpopuli/fling_min_boost_duration
+    chown system system /dev/voxpopuli/fling_max_boost_duration
+    chown system system /dev/voxpopuli/fling_boost_topapp      
+    chown system system /dev/voxpopuli/fling_min_freq_big      
+    chown system system /dev/voxpopuli/fling_min_freq_little   
+    chown system system /dev/voxpopuli/touch_boost_duration    
+    chown system system /dev/voxpopuli/touch_boost_topapp      
+    chown system system /dev/voxpopuli/touch_min_freq_big      
+    chown system system /dev/voxpopuli/touch_min_freq_little
+
     # update cpusets now that processors are up
     write /dev/cpuset/top-app/cpus 0-3
     write /dev/cpuset/foreground/cpus 0-3
@@ -44,26 +65,6 @@ on boot
     write /dev/voxpopuli/touch_boost_topapp         5
     write /dev/voxpopuli/touch_min_freq_big         820
     write /dev/voxpopuli/touch_min_freq_little      1036
-    chmod 0644 /dev/voxpopuli/enable_interaction_boost
-    chmod 0644 /dev/voxpopuli/fling_min_boost_duration
-    chmod 0644 /dev/voxpopuli/fling_max_boost_duration
-    chmod 0644 /dev/voxpopuli/fling_boost_topapp      
-    chmod 0644 /dev/voxpopuli/fling_min_freq_big      
-    chmod 0644 /dev/voxpopuli/fling_min_freq_little   
-    chmod 0644 /dev/voxpopuli/touch_boost_duration    
-    chmod 0644 /dev/voxpopuli/touch_boost_topapp      
-    chmod 0644 /dev/voxpopuli/touch_min_freq_big      
-    chmod 0644 /dev/voxpopuli/touch_min_freq_little   
-    chown system system /dev/voxpopuli/enable_interaction_boost
-    chown system system /dev/voxpopuli/fling_min_boost_duration
-    chown system system /dev/voxpopuli/fling_max_boost_duration
-    chown system system /dev/voxpopuli/fling_boost_topapp      
-    chown system system /dev/voxpopuli/fling_min_freq_big      
-    chown system system /dev/voxpopuli/fling_min_freq_little   
-    chown system system /dev/voxpopuli/touch_boost_duration    
-    chown system system /dev/voxpopuli/touch_boost_topapp      
-    chown system system /dev/voxpopuli/touch_min_freq_big      
-    chown system system /dev/voxpopuli/touch_min_freq_little
 
 on enable-low-power
     # Disable thermal & BCL core_control to update interactive gov settings
