@@ -202,7 +202,6 @@ on property:dev.bootcomplete=1
 
     # Update foreground and background cpusets (goal is load balancing
     # and UI responsiveness).
-on property:sys.boot_completed=1
     write /dev/cpuset/top-app/cpus 0-3
     write /dev/cpuset/foreground/boost/cpus 0-1,3
     write /dev/cpuset/foreground/cpus 0-1,3
