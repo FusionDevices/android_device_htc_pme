@@ -5,7 +5,7 @@
     "branch": "n7x-tabp0le-eas"
   },
   {
-    "repository": "tabp0le/proprietary_vendor_htc",
+    "repository": "OctopusParty/proprietary_vendor_htc",
     "target_path": "vendor/htc",
     "branch": "n7x-eas"
   },
