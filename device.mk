@@ -78,8 +78,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/adblocker:system/bin/adblocker
     
-PRODUCT_PACKAGES += \
-	Turbo
+#PRODUCT_PACKAGES += \
+#	Turbo
 #     prebuiltAPK
 
 # Audio
@@ -135,10 +135,10 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libtinyxml
 	
-PRODUCT_PACKAGES += \
-	OmniJaws \
-	OmniStyle \
-	OmniSwitch
+#PRODUCT_PACKAGES += \
+#	OmniJaws \
+#	OmniStyle \
+#	OmniSwitch
 
 # Fingerprint
 PRODUCT_PACKAGES += \
