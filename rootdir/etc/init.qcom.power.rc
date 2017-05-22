@@ -196,6 +196,8 @@ on property:init.svc.recovery=running
     trigger enable-low-power
 
 on property:dev.bootcomplete=1
+    # Make sure sched boost is disabled
+    write /proc/sys/kernel/sched_boost 0
     # Set scheduler
     setprop sys.io.scheduler "fiops"
 
