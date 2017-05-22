@@ -515,23 +515,10 @@
     
     <!-- Support in Surfaceflinger for blur layers.
          NOTE: This requires additional hardware-specific code. -->
-<!--    <bool name="config_uiBlurEnabled">true</bool> -->
+    <!--    <bool name="config_uiBlurEnabled">true</bool> -->
 
     <!-- If this is true, device supports Sustained Performance Mode. -->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
-
-    <!-- Support in Surfaceflinger for blur layers.
-         NOTE: This requires additional hardware-specific code. -->
-    <bool name="config_uiBlurEnabled">true</bool>
-
-    <!-- Default list of files pinned by the Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-      <item>"/system/framework/arm64/boot-framework.oat"</item>
-      <item>"/system/framework/oat/arm64/services.odex"</item>
-      <item>"/system/framework/arm64/boot.oat"</item>
-      <item>"/system/framework/arm64/boot-core-libart.oat"</item>
-      <item>"/data/dalvik-cache/arm64/system@framework@services.jar@classes.dex"</item>
-    </string-array>
 
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
     <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
@@ -572,7 +559,6 @@
     <!-- Enable system navigation keys. -->
     <bool name="config_supportSystemNavigationKeys">true</bool>
     
->>>>>>> af90d4a... overlay: core: Inline with Marlin's config <Not sure if will work>
     <!-- Whether to intercept inputs on screen off. -->
     <add-resource type="bool" name="config_enableKeyHandler"></add-resource>
     <bool name="config_enableKeyHandler">true</bool>
