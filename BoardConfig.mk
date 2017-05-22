@@ -65,6 +65,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/htc/msm8996
 TARGET_KERNEL_CONFIG := pme_defconfig
+TARGET_KERNEL_HAVE_EXFAT := true
 # TARGET_USES_UNCOMPRESSED_KERNEL := false
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 KERNEL_TOOLCHAIN_PREFIX :=$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-6.x/bin/aarch64-linux-android-
