@@ -1,1 +1,2 @@
 type fpc1155_device, dev_type;
+type rmi_device, dev_type;
