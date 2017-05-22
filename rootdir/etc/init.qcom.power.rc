@@ -133,6 +133,7 @@ on enable-low-power
     write /sys/devices/soc/soc:qcom,bcl/mode "enable"
 
     # Input boost configuration
+    write /sys/module/cpu_boost/parameters/input_boost_enabled 0
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800 2:1324800"
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
@@ -168,6 +169,9 @@ on enable-low-power
 
     # Set idle GPU to 133 Mhz
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 6
+   
+    # Make sure msm touchboost is disabled
+    write /sys/module/msm_performance/parameters/touchboost 0
 
     # Set perfd properties
     setprop sys.post_boot.parsed 1
