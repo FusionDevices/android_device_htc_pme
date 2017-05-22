@@ -12,6 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+IS_ARM64 := true
+
+# Include pure telephony configuration
+include vendor/pure/configs/pure_phone.mk
 
 # Inherit from pme device
 $(call inherit-product, device/htc/pme/device.mk)
