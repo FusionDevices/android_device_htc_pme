@@ -23,6 +23,7 @@ on init
     chown system system /dev/voxpopuli/touch_min_freq_big      
     chown system system /dev/voxpopuli/touch_min_freq_little
 
+on boot
     # update cpusets now that processors are up
     write /dev/cpuset/top-app/cpus 0-3
     write /dev/cpuset/foreground/cpus 0-3
@@ -42,8 +43,6 @@ on init
     # Enable sched boost
     write /proc/sys/kernel/sched_boost 1
 
-on boot
-
     # set default schedTune value for foreground/top-app (only affects EAS)
     write /dev/stune/foreground/schedtune.prefer_idle 1
     write /dev/stune/foreground/schedtune.boost 0
@@ -54,16 +53,17 @@ on boot
     write /dev/stune/schedtune.boost 0
     write /dev/stune/schedtune.prefer_idle 0
 
+on enable-low-power
     # Set Power HAL tunables
     write /dev/voxpopuli/enable_interaction_boost   1
     write /dev/voxpopuli/fling_min_boost_duration   200
     write /dev/voxpopuli/fling_max_boost_duration   2500
-    write /dev/voxpopuli/fling_boost_topapp         5
-    write /dev/voxpopuli/fling_min_freq_big         0
-    write /dev/voxpopuli/fling_min_freq_little      1113
+    write /dev/voxpopuli/fling_boost_topapp         2
+    write /dev/voxpopuli/fling_min_freq_big         307
+    write /dev/voxpopuli/fling_min_freq_little      1036
     write /dev/voxpopuli/touch_boost_duration       200
-    write /dev/voxpopuli/touch_boost_topapp         5
-    write /dev/voxpopuli/touch_min_freq_big         0
+    write /dev/voxpopuli/touch_boost_topapp         2
+    write /dev/voxpopuli/touch_min_freq_big         307
     write /dev/voxpopuli/touch_min_freq_little      1036
 
     # Disable thermal & BCL core_control to update interactive gov settings
@@ -120,6 +120,7 @@ on boot
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "schedutil"
 
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 3000
     write /sys/devices/system/cpu/cpu2/cpufreq/schedutil/up_rate_limit_us 600
     write /sys/devices/system/cpu/cpu2/cpufreq/schedutil/down_rate_limit_us 2000
@@ -132,6 +133,7 @@ on boot
     write /sys/devices/soc/soc:qcom,bcl/mode "enable"
 
     # Input boost configuration
+    write /sys/module/cpu_boost/parameters/input_boost_enabled 0
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800 2:1324800"
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
@@ -167,8 +169,10 @@ on boot
 
     # Set idle GPU to 133 Mhz
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 6
+   
+    # Make sure msm touchboost is disabled
+    write /sys/module/msm_performance/parameters/touchboost 0
 
-on enable-low-power
     # Set perfd properties
     setprop sys.post_boot.parsed 1
     
@@ -196,6 +200,8 @@ on property:init.svc.recovery=running
     trigger enable-low-power
 
 on property:dev.bootcomplete=1
+    # Make sure sched boost is disabled
+    write /proc/sys/kernel/sched_boost 0
     # Set scheduler
     setprop sys.io.scheduler "fiops"
 
