@@ -4,3 +4,5 @@ allow vold forceencrypt_block_device:blk_file rw_file_perms;
 #============= vold ==============
 allow vold storage_stub_file:dir read;
 allow vold unlabeled:filesystem mount;
+allow vold logd:dir { getattr open read };
+allow vold proc_irq:dir { open read };

@@ -6,3 +6,5 @@ allow untrusted_app sysfs:file open;
 allow untrusted_app storage_stub_file:dir getattr;
 allow untrusted_app sysfs:file read;
 allow untrusted_app app_data_file:file open;
+allow untrusted_app unlabeled:file { getattr read };
+allow untrusted_app usermodehelper:file { getattr open read };
