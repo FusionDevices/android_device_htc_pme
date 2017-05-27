@@ -18,3 +18,6 @@ allow cameraserver self:socket { create ioctl read write };
 
 # Grant access to Qualcomm MSM Interface (QMI) radio sockets
 qmux_socket(cameraserver)
+
+#============= cameraserver ==============
+allow cameraserver rootfs:lnk_file getattr;

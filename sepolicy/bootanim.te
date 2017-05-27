@@ -1,0 +1,2 @@
+#============= bootanim ==============
+allow bootanim rootfs:lnk_file getattr;
