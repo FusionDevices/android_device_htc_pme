@@ -1,4 +1,5 @@
 allow platform_app unlabeled:dir { add_name create getattr open read write search };
+allow platform_app unlabeled:dir write;
 allow platform_app unlabeled:file { getattr create open read write };
+allow platform_app unlabeled:file rw_file_perms;
 allow platform_app unlabeled:filesystem getattr;
-
