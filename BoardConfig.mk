@@ -215,6 +215,8 @@ PROTOBUF_SUPPORTED := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
+include vendor/pure/sepolicy/sepolicy.mk
+include vendor/pure/sepolicy/qcom/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Wifi

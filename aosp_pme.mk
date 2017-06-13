@@ -14,11 +14,11 @@
 #
 IS_ARM64 := true
 
-# Include pure telephony configuration
-include vendor/pure/configs/pure_phone.mk
-
 # Inherit from pme device
 $(call inherit-product, device/htc/pme/device.mk)
+
+# Include pure telephony configuration
+$(call inherit-product, vendor/pure/configs/pure_phone.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
