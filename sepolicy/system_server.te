@@ -8,5 +8,7 @@ allow system_server perfd_data_file:dir search;
 allow system_server perfd_data_file:sock_file write;
 allow system_server perfd:unix_stream_socket connectto;
 
-#============= system_server ==============
 allow system_server storage_stub_file:dir getattr;
+allow system_server adbsecure_prop:file read;
+allow system_server dalvikcache_data_file:file write;
+allow system_server theme_data_file:file read;
