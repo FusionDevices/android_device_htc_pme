@@ -86,6 +86,8 @@ persist.dpm.feature=0
 #system prop for enabling/disabling Android XLAT
 persist.net.doxlat=false
 
+media.camera.ts.monotonic=0
+
 #system props for the MM modules
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
