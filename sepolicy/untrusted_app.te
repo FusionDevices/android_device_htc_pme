@@ -2,7 +2,9 @@
 allow untrusted_app sysfs:file getattr;
 allow untrusted_app sysfs:file open;
 
-allow untrusted_app fuseblk:file { getattr open read };
+allow untrusted_app fuseblk:dir { getattr open read write };
+allow untrusted_app fuseblk:file { getattr open read write };
+allow untrusted_app fuseblk:dir search;
 allow untrusted_app storage_stub_file:dir getattr;
 allow untrusted_app sysfs:file read;
 allow untrusted_app app_data_file:file open;
