@@ -168,7 +168,6 @@ drm.service.enabled=true
 
 #Simulate sdcard on /data/media
 #
-persist.fuse_sdcard=true
 
 # GPS
 persist.gps.qc_nlp_in_use=1
