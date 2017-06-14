@@ -1,0 +1,4 @@
+[gerrit]
+host=review.aosnp.com
+port=29418
+defaultbranch=n-mr2
