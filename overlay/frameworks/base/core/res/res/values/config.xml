@@ -29,7 +29,7 @@
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
          The default is false. -->
-    <bool name="config_lidControlsSleep">true</bool>
+    <bool name="config_lidControlsSleep">true</bool>Q
 
     <!-- Indicate whether to allow the device to suspend when the screen is off
          due to the proximity sensor.  This resource should only be set to true
@@ -521,15 +521,6 @@
     <add-resource type="bool" name="config_uiBlurEnabled"></add-resource>
     <bool name="config_uiBlurEnabled">true</bool>
 
-    <!-- Default list of files pinned by the Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-      <item>"/system/framework/arm64/boot-framework.oat"</item>
-      <item>"/system/framework/oat/arm64/services.odex"</item>
-      <item>"/system/framework/arm64/boot.oat"</item>
-      <item>"/system/framework/arm64/boot-core-libart.oat"</item>
-      <item>"/data/dalvik-cache/arm64/system@framework@services.jar@classes.dex"</item>
-    </string-array>
-
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
     <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
 
@@ -554,26 +545,15 @@
         <item>"bp-tools:rndis,adb:rndis,serial,adb"</item>
     </string-array>
 
-    <!-- Default list of files pinned by the Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-        <item>"/system/framework/arm64/boot-framework.oat"</item>
-        <item>"/system/framework/oat/arm64/services.odex"</item>
-        <item>"/system/framework/arm64/boot.oat"</item>
-        <item>"/system/framework/arm64/boot-core-libart.oat"</item>
-    </string-array>
-
-    <!-- Should the pinner service pin the Camera application? -->
-    <bool name="config_pinnerCameraApp">true</bool>
-
     <!-- Enable system navigation keys. -->
     <bool name="config_supportSystemNavigationKeys">true</bool>
     
     <!-- Whether to intercept inputs on screen off. -->
     <add-resource type="bool" name="config_enableKeyHandler"></add-resource>
-    <bool name="config_enableKeyHandler">true</bool>
-    
+    <bool name="config_enableKeyHandler">true</bool>   
 
     <!-- If this is true, device supports Sustained Performance Mode. -->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
   
 </resources>
+
