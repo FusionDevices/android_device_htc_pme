@@ -245,6 +245,7 @@ PRODUCT_COPY_FILES += \
 
 # Enable build to use ffmpeg
 WITH_FFMPEG := true
+DOLBY_ENABLE := true
 
 # OMX
 PRODUCT_PACKAGES += \
