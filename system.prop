@@ -105,6 +105,7 @@ ro.product.bluetooth = 4.2
 
 # Camera
 #camera.disable_zsl_mode=1
+media.camera.ts.monotonic=false
 camera2.portability.force_api=1
 persist.ts.postmakeup=false
 persist.ts.rtmakeup=false
@@ -215,8 +216,6 @@ wifi.interface=wlan0
 
 #system prop for enabling/disabling Android XLAT
 persist.net.doxlat=false
-
-media.camera.ts.monotonic=0
 
 #system props for the MM modules
 #media.stagefright.enable-player=true
