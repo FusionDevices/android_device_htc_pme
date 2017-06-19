@@ -110,6 +110,7 @@ camera2.portability.force_api=1
 persist.ts.postmakeup=false
 persist.ts.rtmakeup=false
 Camera.no_navigation_bar=true
+persist.camera.HAL3.enabled=1
 
 #force HAL1 for below packages
 #camera.hal1.packagelist=com.skype.raider,com.google.android.talk
