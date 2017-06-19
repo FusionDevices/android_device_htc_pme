@@ -104,7 +104,7 @@ ro.bt.version = 4.2
 ro.product.bluetooth = 4.2
 
 # Camera
-#camera.disable_zsl_mode=1
+camera.disable_zsl_mode=1
 media.camera.ts.monotonic=false
 camera2.portability.force_api=1
 persist.ts.postmakeup=false
