@@ -837,6 +837,7 @@ vendor/lib/libsmwrapper.so
 
 # Media
 lib/libOmxVpp.so
+lib64/libOmxVpp.so|b24ad1e6ce503377959aaf5b7c9e711a1d31b8c1
 lib/libvpplibrary.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libOmxAacDec.so
@@ -846,6 +847,11 @@ vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvqzip.so
+vendor/lib/libOmxMux.so|ad8f6cedae41d253e0db641692e7633f0ffd187b
+vendor/lib64/libOmxMux.so|ac28f14cc382111516491e2c0d0fd36610a4613a
+vendor/lib64/libOmxQcelp13Dec.so|288ae995ba6d872c8d5adc2646c8327b35ec7d34
+vendor/lib64/libOmxAacDec.so|7e1d7b6d36268502b3254870dc004d75f85c37f8
+vendor/lib64/libOmxEvrcDec.so|bc2839221637a3e13770dd3c72188bc643e0ec3c
 
 # Mixed
 lib/libprojector.so
