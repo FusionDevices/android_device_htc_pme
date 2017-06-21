@@ -1,11 +1,11 @@
-/* props/sprint-1.80: Sprint WWE: SPCS_001 */
+/* props/sprint-2.42.651.63 8.0_g: Sprint WWE: SPCS_001 */
 static bool is_variant_sprint(std::string bootcid) {
     if (bootcid == "SPCS_001") return true;
     return false;
 }
 
 static const char *htc_sprint_properties =
-    "ro.build.fingerprint=htc/pmewhl_00651/htc_pmewhl:6.0.1/MMB29M/761758.20:user/release-keys\n"
+    "ro.build.fingerprint=htc/pmewhl_00651/htc_pmewhl:7.0/NRD90M/857212.63:user/release-keys\n"
     "ro.build.product=htc_pmewhl\n"
     "ro.product.device=htc_pmewhl\n"
     "ro.product.model=2PS64\n"
