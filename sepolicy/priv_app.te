@@ -1,4 +1,4 @@
-allow priv_app device:dir { open read };
+allow priv_app device:dir r_dir_perms;
 allow priv_app adsprpcd_file:filesystem getattr;
 allow priv_app unlabeled:file { getattr open read };
 allow priv_app fuseblk:dir create_dir_perms;
