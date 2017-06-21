@@ -32,7 +32,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=23
 
 # Default root Method := supersu/magisk
-DEFAULT_ROOT_METHOD := supersu
+# DEFAULT_ROOT_METHOD :=
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2560
