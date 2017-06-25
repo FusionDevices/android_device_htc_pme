@@ -89,23 +89,6 @@
         <item>255</item>  <!-- 10000+ -->
     </integer-array>
 
-    <!-- Array of output values for button backlight corresponding to the LUX values
-         in the config_autoBrightnessLevels array.  This array should have size one greater
-         than the size of the config_autoBrightnessLevels array.
-         This must be overridden in platform specific overlays -->
-    <integer-array name="config_autoBrightnessButtonBacklightValues">
-        <item>20</item>
-        <item>45</item>
-        <item>65</item>
-        <item>90</item>
-        <item>120</item>
-        <item>150</item>
-        <item>180</item>
-        <item>210</item>
-        <item>230</item>
-        <item>255</item>
-    </integer-array>
-
     <!-- When the screen is turned on, the previous estimate of the ambient light level at the time
          the screen was turned off is restored and is used to determine the initial screen
          brightness.
