@@ -44,9 +44,6 @@ TARGET_USES_64_BIT_BINDER := true
 
 # STRICT_ALIASING := true
 #CLANG_FAST := true
-ENABLE_CPUSETS := true
-
-ENABLE_SCHEDBOOST := true
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
