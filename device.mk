@@ -319,4 +319,4 @@ PRODUCT_PACKAGES += \
 
 # OTA Setup
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ota.manifest=https://raw.githubusercontent.com/PureNexusProjectMod/OTA_server/master/pme.json
+    ro.ota.manifest=https://raw.githubusercontent.com/FusionDevices/OTA_server/master/pme.json
