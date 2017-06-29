@@ -315,8 +315,3 @@ PRODUCT_COPY_FILES += \
 # KeyHandler
 PRODUCT_PACKAGES += \
     com.cyanogenmod.keyhandler
-
-
-# OTA Setup
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ota.manifest=https://raw.githubusercontent.com/PureFusionOS/OTA_server/master/pme.json

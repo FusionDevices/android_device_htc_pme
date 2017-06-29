@@ -14,25 +14,31 @@
 #
 IS_ARM64 := true
 
-# Inherit from pme device
-$(call inherit-product, device/htc/pme/device.mk)
-
 # Include pure telephony configuration
 $(call inherit-product, vendor/pure/configs/pure_phone.mk)
 
+# Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from pme device
+$(call inherit-product, device/htc/pme/device.mk)
 
 # Device identifier. This must come after all inclusions
 # Inherit some common AOSP stuff.
 # $(call inherit-product, vendor/aosp/common.mk)
 
 PRODUCT_DEVICE := pme
-PRODUCT_NAME := aosp_pme
+PRODUCT_NAME := pme
 PRODUCT_BRAND := HTC
 PRODUCT_MODEL := HTC 10
 PRODUCT_MANUFACTURER := HTC
 PRODUCT_RELEASE_NAME := pme
 
-$(call inherit-product-if-exists, vendor/htc/pme/pme-vendor.mk)
 TARGET_VENDOR := htc
+
+# OTA Setup
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.manifest=https://raw.githubusercontent.com/PureFusionOS/OTA_server/master/pme.json
+
+$(call inherit-product-if-exists, vendor/htc/pme/pme-vendor.mk)
