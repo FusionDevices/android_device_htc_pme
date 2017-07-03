@@ -247,7 +247,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/public.libraries.txt:system/vendor/etc/public.libraries.txt
 
 # Enable build to use ffmpeg
-WITH_FFMPEG := true
+WITH_FFMPEG := false
 DOLBY_ENABLE := true
 
 # OMX
