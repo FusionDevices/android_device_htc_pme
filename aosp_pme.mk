@@ -14,6 +14,9 @@
 #
 IS_ARM64 := true
 
+# Include Official OTA Package
+WITH_OFFICIALOTA := true
+
 # Include pure telephony configuration
 $(call inherit-product, vendor/pure/configs/pure_phone.mk)
 
@@ -36,9 +39,5 @@ PRODUCT_MANUFACTURER := HTC
 PRODUCT_RELEASE_NAME := pme
 
 TARGET_VENDOR := htc
-
-# OTA Setup
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ota.manifest=https://raw.githubusercontent.com/PureFusionOS/OTA_server/master/pme.json
 
 $(call inherit-product-if-exists, vendor/htc/pme/pme-vendor.mk)
