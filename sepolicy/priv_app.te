@@ -5,3 +5,4 @@ allow priv_app fuseblk:dir create_dir_perms;
 allow priv_app fuseblk:dir search;
 allow priv_app fuseblk:file create_file_perms;
 allow priv_app storage_stub_file:dir getattr;
+allow priv_app rfs_system_file:dir read;
