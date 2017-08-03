@@ -29,5 +29,8 @@
 
     <!-- Restart preview for front camera onPictureTaken -->
     <bool name="front_camera_restart_preview_onPictureTaken">true</bool>
+	
+	<!-- show/hide the advanced features menu -->
+    <bool name="enable_advanced_features">true</bool>
 
 </resources>
