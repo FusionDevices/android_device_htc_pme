@@ -17,6 +17,9 @@ IS_ARM64 := true
 # Include Official OTA Package
 WITH_OFFICIALOTA := true
 
+# Support Beta OTA Opt-in (Requires additional ota xml)
+BETA_OTA := true
+
 # Include pure telephony configuration
 $(call inherit-product, vendor/pure/configs/pure_phone.mk)
 
