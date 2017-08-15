@@ -124,12 +124,12 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_USES_QCNE := true
 
 # Enable dex pre-opt to speed up initial boot
-ifeq ($(HOST_OS),linux)
-  ifeq ($(WITH_DEXPREOPT),)
-    WITH_DEXPREOPT := true
-    WITH_DEXPREOPT_PIC := true
-  endif
-endif
+#ifeq ($(HOST_OS),linux)
+#  ifeq ($(WITH_DEXPREOPT),)
+#    WITH_DEXPREOPT := true
+#    WITH_DEXPREOPT_PIC := true
+#  endif
+#endif
 
 # Display
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
@@ -193,7 +193,7 @@ BOARD_NFC_CHIPSET := pn548
 TARGET_USES_NQ_NFC := true
 
 # Enable dex-preoptimization to speed up first boot sequence
-WITH_DEXPREOPT := true
+#WITH_DEXPREOPT := true
 
 # Power
 TARGET_POWERHAL_VARIANT := voxpopuli
