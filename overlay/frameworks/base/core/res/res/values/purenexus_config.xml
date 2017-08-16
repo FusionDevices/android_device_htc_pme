@@ -33,6 +33,9 @@
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
     <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
 
+    <!-- Does the notification LED support multiple colors -->
+    <bool name="config_multiColorNotificationLed">true</bool>
+
     <!-- Is the battery LED intrusive? -->
     <bool name="config_intrusiveBatteryLed">true</bool>
 
