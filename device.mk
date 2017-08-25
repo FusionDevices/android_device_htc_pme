@@ -114,6 +114,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libshim_camera
 
+TARGET_USES_GOOGLE_CAMERA := true
+TARGET_USES_OP_CAMERA := true
+
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
     cneapiclient \
