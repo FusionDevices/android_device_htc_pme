@@ -111,8 +111,8 @@ PRODUCT_PACKAGES += \
     libshim_camera
 
 TARGET_USES_GOOGLE_CAMERA := true
-TARGET_USES_OP_CAMERA := true
-
+#TARGET_USES_OP_CAMERA := true
+TARGET_USES_SNAP_CAMERA := true
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
     cneapiclient \
