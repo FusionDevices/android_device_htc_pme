@@ -200,7 +200,6 @@ NXP_CHIP_TYPE := 2
 TARGET_POWERHAL_VARIANT := voxpopuli
 TARGET_USES_INTERACTION_BOOST := true
 -include device/voxpopuli/sepolicy/sepolicy.mk
-BOARD_HAL_STATIC_LIBRARIES := libdumpstate.msm8996
 
 # Qualcomm
 BOARD_USES_QCOM_HARDWARE := true

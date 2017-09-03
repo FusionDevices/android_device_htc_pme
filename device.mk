@@ -310,6 +310,10 @@ PRODUCT_PACKAGES += \
     power.msm8996 \
     thermal.msm8996
 
+# Dumpstate
+PRODUCT_PACKAGES += \
+    android.hardware.dumpstate@1.0-service.msm8996
+
 # Properties
 PRODUCT_PACKAGES += \
     operator-properties
