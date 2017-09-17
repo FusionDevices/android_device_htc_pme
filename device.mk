@@ -356,7 +356,7 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-service
 # USB HAL
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
+    android.hardware.usb@1.0-service.pme
 
 # Vibrator
 PRODUCT_PACKAGES += \
