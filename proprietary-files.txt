@@ -104,6 +104,7 @@ vendor/lib/libjni_dualcamera.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
+vendor/lib/libmemalloc.so|bca57c2d5522a23b9878508e88bd1b627deb0539
 vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
@@ -117,6 +118,7 @@ vendor/lib/libqomx_jpegenc.so
 vendor/lib/libseemore.so
 vendor/lib/libtrueportrait.so
 vendor/lib/libubifocus.so
+vendor/lib64/libmemalloc.so|d94b88084fb2cea1ce79ff4cd8e9cdec4aeca74c
 vendor/lib64/libpvr.so
 
 # Camera actuators
