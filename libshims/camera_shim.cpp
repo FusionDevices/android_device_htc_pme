@@ -41,3 +41,12 @@ extern "C" void* _ZN7android21SurfaceComposerClient13createSurfaceERKNS_7String8
     uint32_t w, uint32_t h, android::PixelFormat fmt, uint32_t flags) {
     return _ZN7android21SurfaceComposerClient13createSurfaceERKNS_7String8EjjijPNS_14SurfaceControlEjj(s, w, h, fmt, flags, NULL, 0, 0);
 }
+
+extern "C" {
+    /* status_t SurfaceControl::setLayer */
+    android::status_t _ZN7android14SurfaceControl8setLayerEi( uint32_t layer);
+
+    android::status_t _ZN7android14SurfaceControl8setLayerEj( int32_t layer) {
+        return _ZN7android14SurfaceControl8setLayerEi( (uint32_t)layer);
+    }
+}
