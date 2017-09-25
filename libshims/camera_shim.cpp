@@ -50,3 +50,9 @@ extern "C" {
         return _ZN7android14SurfaceControl8setLayerEi( (uint32_t)layer);
     }
 }
+
+extern "C" void _ZN7android20DisplayEventReceiverC1ENS_16ISurfaceComposer11VsyncSourceE();
+
+extern "C" void _ZN7android20DisplayEventReceiverC1Ev() {
+    _ZN7android20DisplayEventReceiverC1ENS_16ISurfaceComposer11VsyncSourceE;
+}
