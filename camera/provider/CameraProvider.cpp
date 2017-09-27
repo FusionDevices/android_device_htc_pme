@@ -14,11 +14,10 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "CamProvider@2.4-impl"
+#define LOG_TAG "CamProvider@2.4-impl-pme"
 #include <android/log.h>
 
 #include "CameraProvider.h"
-#include "CameraDevice_1_0.h"
 #include "CameraDevice_3_2.h"
 #include <string.h>
 #include <utils/Trace.h>
@@ -36,7 +35,6 @@ const char *kLegacyProviderName = "legacy/0";
 // "device@<version>/legacy/<id>"
 const std::regex kDeviceNameRE("device@([0-9]+\\.[0-9]+)/legacy/(.+)");
 const char *kHAL3_2 = "3.2";
-const char *kHAL1_0 = "1.0";
 const int kMaxCameraDeviceNameLen = 128;
 const int kMaxCameraIdLen = 16;
 
@@ -143,8 +141,6 @@ int CameraProvider::getCameraDeviceVersion(const hidl_string& deviceName) {
     if (deviceVersion == kHAL3_2) {
         // maybe switched to 3.4 or define the hidl version enum later
         return CAMERA_DEVICE_API_VERSION_3_2;
-    } else if (deviceVersion == kHAL1_0) {
-        return CAMERA_DEVICE_API_VERSION_1_0;
     }
     return 0;
 }
@@ -152,13 +148,12 @@ int CameraProvider::getCameraDeviceVersion(const hidl_string& deviceName) {
 std::string CameraProvider::getHidlDeviceName(
         std::string cameraId, int deviceVersion) {
     // Maybe consider create a version check method and SortedVec to speed up?
-    if (deviceVersion != CAMERA_DEVICE_API_VERSION_1_0 &&
-            deviceVersion != CAMERA_DEVICE_API_VERSION_3_2 &&
+    if (deviceVersion != CAMERA_DEVICE_API_VERSION_3_2 &&
             deviceVersion != CAMERA_DEVICE_API_VERSION_3_3 &&
             deviceVersion != CAMERA_DEVICE_API_VERSION_3_4 ) {
         return hidl_string("");
     }
-    const char* versionStr = (deviceVersion == CAMERA_DEVICE_API_VERSION_1_0) ? kHAL1_0 : kHAL3_2;
+    const char* versionStr = kHAL3_2;
     char deviceName[kMaxCameraDeviceNameLen];
     snprintf(deviceName, sizeof(deviceName), "device@%s/legacy/%s",
             versionStr, cameraId.c_str());
@@ -233,24 +228,6 @@ bool CameraProvider::initialize() {
         mCameraDeviceNames.add(
                 std::make_pair(cameraIdStr,
                                getHidlDeviceName(cameraIdStr, deviceVersion)));
-        if (deviceVersion >= CAMERA_DEVICE_API_VERSION_3_2 &&
-                mModule->isOpenLegacyDefined()) {
-            // try open_legacy to see if it actually works
-            struct hw_device_t* halDev = nullptr;
-            int ret = mModule->openLegacy(cameraId, CAMERA_DEVICE_API_VERSION_1_0, &halDev);
-            if (ret == 0) {
-                mOpenLegacySupported[cameraIdStr] = true;
-                halDev->close(halDev);
-                mCameraDeviceNames.add(
-                        std::make_pair(cameraIdStr,
-                                getHidlDeviceName(cameraIdStr, CAMERA_DEVICE_API_VERSION_1_0)));
-            } else if (ret == -EBUSY || ret == -EUSERS) {
-                // Looks like this provider instance is not initialized during
-                // system startup and there are other camera users already.
-                // Not a good sign but not fatal.
-                ALOGW("%s: open_legacy try failed!", __FUNCTION__);
-            }
-        }
     }
 
     return false; // mInitFailed
@@ -269,7 +246,6 @@ int CameraProvider::checkCameraVersion(int id, camera_info info) {
     if (mModule->getModuleApiVersion() >= CAMERA_MODULE_API_VERSION_2_0) {
         // Verify the device version is in the supported range
         switch (info.device_version) {
-            case CAMERA_DEVICE_API_VERSION_1_0:
             case CAMERA_DEVICE_API_VERSION_3_2:
             case CAMERA_DEVICE_API_VERSION_3_3:
             case CAMERA_DEVICE_API_VERSION_3_4:
@@ -377,55 +353,9 @@ Return<void> CameraProvider::isSetTorchModeSupported(isSetTorchModeSupported_cb 
 }
 
 Return<void> CameraProvider::getCameraDeviceInterface_V1_x(
-        const hidl_string& cameraDeviceName, getCameraDeviceInterface_V1_x_cb _hidl_cb)  {
-    std::string cameraId, deviceVersion;
-    bool match = matchDeviceName(cameraDeviceName, &deviceVersion, &cameraId);
-    if (!match) {
-        _hidl_cb(Status::ILLEGAL_ARGUMENT, nullptr);
-        return Void();
-    }
-
-    std::string deviceName(cameraDeviceName.c_str());
-    ssize_t index = mCameraDeviceNames.indexOf(std::make_pair(cameraId, deviceName));
-    if (index == NAME_NOT_FOUND) { // Either an illegal name or a device version mismatch
-        Status status = Status::OK;
-        ssize_t idx = mCameraIds.indexOf(cameraId);
-        if (idx == NAME_NOT_FOUND) {
-            ALOGE("%s: cannot find camera %s!", __FUNCTION__, cameraId.c_str());
-            status = Status::ILLEGAL_ARGUMENT;
-        } else { // invalid version
-            ALOGE("%s: camera device %s does not support version %s!",
-                    __FUNCTION__, cameraId.c_str(), deviceVersion.c_str());
-            status = Status::OPERATION_NOT_SUPPORTED;
-        }
-        _hidl_cb(status, nullptr);
-        return Void();
-    }
-
-    if (mCameraStatusMap.count(cameraId) == 0 ||
-            mCameraStatusMap[cameraId] != CAMERA_DEVICE_STATUS_PRESENT) {
-        _hidl_cb(Status::ILLEGAL_ARGUMENT, nullptr);
-        return Void();
-    }
-
-    sp<android::hardware::camera::device::V1_0::implementation::CameraDevice> device =
-            new android::hardware::camera::device::V1_0::implementation::CameraDevice(
-                    mModule, cameraId, mCameraDeviceNames);
-
-    if (device == nullptr) {
-        ALOGE("%s: cannot allocate camera device for id %s", __FUNCTION__, cameraId.c_str());
-        _hidl_cb(Status::INTERNAL_ERROR, nullptr);
-        return Void();
-    }
-
-    if (device->isInitFailed()) {
-        ALOGE("%s: camera device %s init failed!", __FUNCTION__, cameraId.c_str());
-        device = nullptr;
-        _hidl_cb(Status::INTERNAL_ERROR, nullptr);
-        return Void();
-    }
-
-    _hidl_cb (Status::OK, device);
+        const hidl_string& cameraDeviceName __unused, getCameraDeviceInterface_V1_x_cb _hidl_cb)  {
+    // HAL1 is not supported by pme camera
+    _hidl_cb(Status::OPERATION_NOT_SUPPORTED, nullptr);
     return Void();
 }
 
