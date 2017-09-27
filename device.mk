@@ -73,10 +73,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     $(LOCAL_PATH)/configs/com.htc.software.market.xml:system/etc/permissions/com.htc.software.market.xml
 
-# Adblocker
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/adblocker:system/bin/adblocker
-    
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
@@ -128,7 +124,7 @@ PRODUCT_PACKAGES += \
     libjni_livedisplay \
     liboverlay \
     libtinyxml
-	
+
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -145,8 +141,8 @@ PRODUCT_PACKAGES += \
 
 # OEM Unlock reporting
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.oem_unlock_supported=1    
-     
+    ro.oem_unlock_supported=1
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8996 \
