@@ -125,6 +125,10 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libtinyxml
 
+# Dex2oat Hacks
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-swap=false
+
 
 # Fingerprint
 PRODUCT_PACKAGES += \
