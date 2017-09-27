@@ -264,10 +264,6 @@ PRODUCT_PACKAGES += \
     power.msm8996 \
     thermal.msm8996
 
-# Prebuilts
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/org.apache.http.legacy.jar:system/framework/org.apache.http.legacy.jar
-
 # Properties
 PRODUCT_PACKAGES += \
     operator-properties
