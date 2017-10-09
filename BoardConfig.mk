@@ -43,13 +43,13 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno530
 TARGET_USES_64_BIT_BINDER := true
 
 # STRICT_ALIASING := true
-CLANG_FAST := true
+#CLANG_FAST := true
 ENABLE_CPUSETS := true
 
 ENABLE_SCHEDBOOST := true
 
 # Use Snapdragon LLVM, if available
-TARGET_USE_SDCLANG := true
+#TARGET_USE_SDCLANG := true
 # USE_CLANG_PLATFORM_BUILD := true
 
 # Bootloader
@@ -69,7 +69,7 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/htc/msm8996
 TARGET_KERNEL_CONFIG := pme_defconfig
 # TARGET_USES_UNCOMPRESSED_KERNEL := false
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 # KERNEL_TOOLCHAIN_PREFIX :=$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-6.x/bin/aarch64-linux-android-
 
 # Audio
