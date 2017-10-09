@@ -6,10 +6,10 @@
     "revision"    : "pf-o"
   },
  {
-    "remote"      : "fusion",
-    "repository"  : "PureFusionOS/android_device_qcom_common",
+    "remote"      : "github",
+    "repository"  : "LineageOS/android_device_qcom_common",
     "target_path" : "device/qcom/common",
-    "revision"    : "n-mr2"
+    "revision"    : "lineage-15.0"
  },
  {
     "remote"      : "fusion",
@@ -27,18 +27,18 @@
     "remote"      : "github",
     "repository"  : "LineageOS/android_vendor_nxp-nfc_opensource_frameworks",
     "target_path" : "vendor/nxp-nfc/opensource/frameworks",
-    "revision"    : "cm-14.1"
+    "revision"    : "lineage-15.0"
  },
  {
     "remote"      : "github",
     "repository"  : "LineageOS/android_vendor_nxp-nfc_opensource_libnfc-nci",
     "target_path" : "vendor/nxp-nfc/opensource/libnfc-nci",
-    "revision"    : "cm-14.1"
+    "revision"    : "lineage-15.0"
  },
  {
     "remote"      : "github",
     "repository"  : "LineageOS/android_vendor_nxp-nfc_opensource_Nfc",
     "target_path" : "vendor/nxp-nfc/opensource/Nfc",
-    "revision"    : "cm-14.1"
+    "revision"    : "lineage-15.0"
  }
 ]
