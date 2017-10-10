@@ -454,19 +454,8 @@
         <item>"bp-tools:rndis,adb:rndis,serial,adb"</item>
     </string-array>
 
-   <!-- Default list of files pinned by the Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-        <item>"/system/framework/arm64/boot-framework.oat"</item>
-        <item>"/system/framework/oat/arm64/services.odex"</item>
-        <item>"/system/framework/arm64/boot.oat"</item>
-        <item>"/system/framework/arm64/boot-core-libart.oat"</item>
-    </string-array>
-
-    <!-- Enable system navigation keys. -->
-    <bool name="config_supportSystemNavigationKeys">true</bool>
-
-    <!-- Whether to intercept inputs on screen off. -->
-    <add-resource type="bool" name="config_enableKeyHandler"></add-resource>
-    <bool name="config_enableKeyHandler">true</bool>
-
+    <!-- VoLTE settings as per stock -->
+    <bool name="config_device_volte_available">true</bool>
+    <bool name="config_carrier_volte_available">true</bool>
+    <bool name="config_carrier_volte_tty_supported">true</bool>
 </resources>
