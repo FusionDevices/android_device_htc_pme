@@ -15,7 +15,7 @@
     "remote"      : "fusion",
     "repository"  : "OctopusParty/proprietary_vendor_htc",
     "target_path" : "vendor/htc",
-    "revision"    : "n-mr2"
+    "revision"    : "pf-o"
  },
  {
     "remote"      : "voxpopuli",
