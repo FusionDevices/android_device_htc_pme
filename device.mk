@@ -381,3 +381,6 @@ PRODUCT_COPY_FILES += \
 # KeyHandler
 PRODUCT_PACKAGES += \
     com.cyanogenmod.keyhandler
+
+# MSM8996 Headers
+PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8996/kernel-headers
