@@ -3,7 +3,7 @@
     "remote"      : "FusionDevices",
     "repository"  : "FusionDevices/android_kernel_htc_msm8996",
     "target_path" : "kernel/htc/msm8996",
-    "revision"    : "n-mr2"
+    "revision"    : "pf-o"
   },
  {
     "remote"      : "fusion",
