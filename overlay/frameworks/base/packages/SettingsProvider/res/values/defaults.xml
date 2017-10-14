@@ -30,5 +30,5 @@
     <bool name="def_notification_pulse">false</bool>
 
     <!-- Disable Bluetooth on first boot -->
-    <bool name="def_bluetooth_on">true</bool>
+    <bool name="def_bluetooth_on">false</bool>
 </resources>
