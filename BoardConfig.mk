@@ -208,13 +208,6 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 # NFC
 BOARD_NFC_HAL_SUFFIX := $(TARGET_BOARD_PLATFORM)
 
-# Oreo stuff
-TARGET_NEEDS_GCC_LIBC := true
-TARGET_NEEDS_GCC_LIBRIL := true
-
-# Enable dex-preoptimization to speed up first boot sequence
-#WITH_DEXPREOPT := true
-
 # Power
 TARGET_POWERHAL_VARIANT := voxpopuli
 TARGET_USES_INTERACTION_BOOST := true
@@ -229,7 +222,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # Release
-TARGET_RELEASETOOLS_EXTENSIONS := device/htc/pme/releasetools
+# TARGET_RELEASETOOLS_EXTENSIONS := device/htc/pme/releasetools
 
 # RIL
 # TARGET_RIL_VARIANT := caf
