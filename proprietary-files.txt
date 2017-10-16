@@ -1,5 +1,5 @@
 # ADSP
-bin/adsprpcd:vendor/bin/adsprpcd
+bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libadsp_hvx_callback_skel.so
 vendor/lib/libadsp_hvx_stub.so
@@ -83,22 +83,24 @@ vendor/lib/libaptXHD-1.0.0-rel-Android21-ARMv7A.so|d12efedab3681f5419ba9b79275e5
 vendor/lib/libaptXScheduler.so|6a0a2d564fde8434018b9840ce81d976b4d4ab28
 
 # Camera
-bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
+bin/mm-qcamera-daemon
 etc/camera/camera_config.xml
 etc/camera/imx377_htc_chromatix.xml
 etc/camera/ov12890eco_htc_chromatix.xml
 etc/camera/ov12890_htc_chromatix.xml
 etc/camera/s5k4e6_htc_chromatix.xml
-lib/hw/camera.msm8996.so:vendor/lib/hw/camera.msm8996.so
-lib/libawb_calibration.so:vendor/lib/libawb_calibration.so
-lib/libBeautyChat.so:vendor/lib/libBeautyChat.so
-lib/libcameraface.so:vendor/lib/libcameraface.so
-lib/libcamerapp.so:vendor/lib/libcamerapp.so
-lib/libhtc_facebeauty.so:vendor/lib/libhtc_facebeauty.so
-lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
-lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so
-lib/libmm-qcamera.so:vendor/lib/libmm-qcamera.so
-lib/libqomx_core.so:vendor/lib/libqomx_core.so
+lib/hw/camera.msm8996.so
+lib/libawb_calibration.so
+lib/libBeautyChat.so
+lib/libcameraface.so
+lib/libcamerapp.so
+lib/libmmcamera_interface.so
+lib/libmmjpeg_interface.so
+lib/libmorpho_hyperlapse_jni_v6.so
+lib/libmorpho_movie_stabilizer4.so
+lib/libmorpho_render_util_v6.so
+lib/libmm-qcamera.so
+lib/libqomx_core.so
 lib64/libawb_calibration.so
 vendor/lib/libchromaflash.so
 vendor/lib/libcppf.so
@@ -519,7 +521,6 @@ etc/permissions/com.quicinc.cne.xml
 framework/ConnectivityExt.jar
 framework/cneapiclient.jar
 framework/com.quicinc.cne.jar
--priv-app/CNEService/CNEService.apk
 vendor/lib/libcne.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneqmiutils.so
@@ -555,7 +556,7 @@ vendor/lib64/libdpmnsrm.so
 vendor/lib64/libdpmtcm.so
 
 # DRM
-bin/qseecomd:vendor/bin/qseecomd
+bin/qseecomd
 vendor/lib/libQSEEComAPI.so
 vendor/lib64/lib-sec-disp.so
 vendor/lib64/libGPreqcancel.so
@@ -572,40 +573,44 @@ vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
 # DRM firmware
-etc/firmware/cmnlib.b00:vendor/firmware/cmnlib.b00
-etc/firmware/cmnlib.b01:vendor/firmware/cmnlib.b01
-etc/firmware/cmnlib.b02:vendor/firmware/cmnlib.b02
-etc/firmware/cmnlib.b03:vendor/firmware/cmnlib.b03
-etc/firmware/cmnlib.b04:vendor/firmware/cmnlib.b04
-etc/firmware/cmnlib.b05:vendor/firmware/cmnlib.b05
-etc/firmware/cmnlib.mdt:vendor/firmware/cmnlib.mdt
-etc/firmware/dxhdcp2.b00:vendor/firmware/dxhdcp2.b00
-etc/firmware/dxhdcp2.b01:vendor/firmware/dxhdcp2.b01
-etc/firmware/dxhdcp2.b02:vendor/firmware/dxhdcp2.b02
-etc/firmware/dxhdcp2.b03:vendor/firmware/dxhdcp2.b03
-etc/firmware/dxhdcp2.b04:vendor/firmware/dxhdcp2.b04
-etc/firmware/dxhdcp2.b05:vendor/firmware/dxhdcp2.b05
-etc/firmware/dxhdcp2.b06:vendor/firmware/dxhdcp2.b06
-etc/firmware/dxhdcp2.mdt:vendor/firmware/dxhdcp2.mdt
-etc/firmware/cmnlib64.b04:vendor/firmware/cmnlib64.b04
-etc/firmware/cmnlib64.b05:vendor/firmware/cmnlib64.b05
-etc/firmware/cmnlib64.mdt:vendor/firmware/dxhdcp2.mdt
-etc/firmware/htc_drmprov.b00:vendor/firmware/htc_drmprov.b00
-etc/firmware/htc_drmprov.b01:vendor/firmware/htc_drmprov.b01
-etc/firmware/htc_drmprov.b02:vendor/firmware/htc_drmprov.b02
-etc/firmware/htc_drmprov.b03:vendor/firmware/htc_drmprov.b03
-etc/firmware/htc_drmprov.b04:vendor/firmware/htc_drmprov.b04
-etc/firmware/htc_drmprov.b05:vendor/firmware/htc_drmprov.b05
-etc/firmware/htc_drmprov.b06:vendor/firmware/htc_drmprov.b06
-etc/firmware/htc_drmprov.mdt:vendor/firmware/htc_drmprov.mdt
-etc/firmware/widevine.b00:vendor/firmware/widevine.b00
-etc/firmware/widevine.b01:vendor/firmware/widevine.b01
-etc/firmware/widevine.b02:vendor/firmware/widevine.b02
-etc/firmware/widevine.b03:vendor/firmware/widevine.b03
-etc/firmware/widevine.b04:vendor/firmware/widevine.b04
-etc/firmware/widevine.b05:vendor/firmware/widevine.b05
-etc/firmware/widevine.b06:vendor/firmware/widevine.b06
-etc/firmware/widevine.mdt:vendor/firmware/widevine.mdt
+etc/firmware/cmnlib.b00
+etc/firmware/cmnlib.b01
+etc/firmware/cmnlib.b02
+etc/firmware/cmnlib.b03
+etc/firmware/cmnlib.b04
+etc/firmware/cmnlib.b05
+etc/firmware/cmnlib.mdt
+etc/firmware/dxhdcp2.b00
+etc/firmware/dxhdcp2.b01
+etc/firmware/dxhdcp2.b02
+etc/firmware/dxhdcp2.b03
+etc/firmware/dxhdcp2.b04
+etc/firmware/dxhdcp2.b05
+etc/firmware/dxhdcp2.b06
+etc/firmware/dxhdcp2.mdt
+etc/firmware/cmnlib64.b00
+etc/firmware/cmnlib64.b01
+etc/firmware/cmnlib64.b02
+etc/firmware/cmnlib64.b03
+etc/firmware/cmnlib64.b04
+etc/firmware/cmnlib64.b05
+etc/firmware/cmnlib64.mdt
+etc/firmware/htc_drmprov.b00
+etc/firmware/htc_drmprov.b01
+etc/firmware/htc_drmprov.b02
+etc/firmware/htc_drmprov.b03
+etc/firmware/htc_drmprov.b04
+etc/firmware/htc_drmprov.b05
+etc/firmware/htc_drmprov.b06
+etc/firmware/htc_drmprov.mdt
+etc/firmware/widevine.b00
+etc/firmware/widevine.b01
+etc/firmware/widevine.b02
+etc/firmware/widevine.b03
+etc/firmware/widevine.b04
+etc/firmware/widevine.b05
+etc/firmware/widevine.b06
+etc/firmware/widevine.mdt
 
 # Fingerprint
 etc/firmware/htc_fpc_ta.b00
@@ -616,9 +621,11 @@ etc/firmware/htc_fpc_ta.b04
 etc/firmware/htc_fpc_ta.b05
 etc/firmware/htc_fpc_ta.b06
 etc/firmware/htc_fpc_ta.mdt
-lib64/hw/fingerprint.msm8996.so:vendor/lib64/hw/fingerprint.vendor.msm8996.so
-lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so
-lib64/lib_fp_img_store.so:vendor/lib64/lib_fp_img_store.so
+lib/lib_fpc_tac_shared.so
+lib/lib_fp_img_store.so
+lib64/hw/fingerprint.vendor.msm8996.so
+lib64/lib_fpc_tac_shared.so
+lib64/lib_fp_img_store.so
 
 # Fingerprint compatibility for M firmware
 etc/firmware/htc_fp6_ta.b00|a1391c0906b280fa9f2e2492a3932e69653a42c0
@@ -804,17 +811,17 @@ etc/firmware/usb_typec_otp_ad.img
 bin/hvdcp_opti
 
 # IPA
-bin/ipacm-diag:vendor/bin/ipacm-diag
+bin/ipacm-diag
 
 # Keymaster
-etc/firmware/keymaste.b00:vendor/firmware/keymaste.b00
-etc/firmware/keymaste.b01:vendor/firmware/keymaste.b01
-etc/firmware/keymaste.b02:vendor/firmware/keymaste.b02
-etc/firmware/keymaste.b03:vendor/firmware/keymaste.b03
-etc/firmware/keymaste.b04:vendor/firmware/keymaste.b04
-etc/firmware/keymaste.b05:vendor/firmware/keymaste.b05
-etc/firmware/keymaste.b06:vendor/firmware/keymaste.b06
-etc/firmware/keymaste.mdt:vendor/firmware/keymaste.mdt
+etc/firmware/keymaste.b00
+etc/firmware/keymaste.b01
+etc/firmware/keymaste.b02
+etc/firmware/keymaste.b03
+etc/firmware/keymaste.b04
+etc/firmware/keymaste.b05
+etc/firmware/keymaste.b06
+etc/firmware/keymaste.mdt
 
 # Keystore
 vendor/lib/hw/keystore.msm8996.so
@@ -837,11 +844,13 @@ vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvqzip.so
+vendor/lib/libwms.so
 vendor/lib/libOmxMux.so|ad8f6cedae41d253e0db641692e7633f0ffd187b
 vendor/lib64/libOmxMux.so|ac28f14cc382111516491e2c0d0fd36610a4613a
 vendor/lib64/libOmxQcelp13Dec.so|288ae995ba6d872c8d5adc2646c8327b35ec7d34
 vendor/lib64/libOmxAacDec.so|7e1d7b6d36268502b3254870dc004d75f85c37f8
 vendor/lib64/libOmxEvrcDec.so|bc2839221637a3e13770dd3c72188bc643e0ec3c
+vendor/lib64/libwms.so
 
 # Mixed
 lib/libprojector.so
@@ -864,7 +873,7 @@ vendor/lib64/libQtiTether.so
 # Perf
 bin/energy-awareness
 bin/iop
-bin/msm_irqbalance:vendor/bin/msm_irqbalance
+bin/msm_irqbalance
 vendor/lib/libqti-iop.so
 vendor/lib64/libqti-iop.so
 vendor/bin/perfd|01f3154ec4e8bbfc726cbda152689693b91cba71
@@ -882,7 +891,7 @@ vendor/etc/perf-profile0.conf
 
 # Peripheral manager
 bin/pm-proxy
-bin/pm-service:vendor/bin/pm-service
+bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
@@ -997,10 +1006,10 @@ vendor/lib64/libvoice-svc.so
 
 # Sensors
 bin/sensors.qcom
-etc/sensors/hals.conf
+etc/sensors/hals.conf:vendor/etc/sensors/hals.conf
 etc/sensors/sensor_def_qcomdev.conf
-lib/hw/sensors.msm8996.so:vendor/lib/hw/sensors.msm8996.so
-lib64/hw/sensors.msm8996.so:vendor/lib64/hw/sensors.msm8996.so
+lib/hw/sensors.msm8996.so
+lib64/hw/sensors.msm8996.so
 vendor/lib/libsensor1.so
 vendor/lib/sensor_calibrate.so
 vendor/lib64/libsensor1.so
@@ -1013,13 +1022,20 @@ vendor/bin/thermal-engine|d166c7768ab77f4ee18488271479449ef0db924c
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
+# RIDL
+vendor/etc/RIDL/qdss.cfg:vendor/etc/RIDL/qdss.cfg
+
 # Time services
 -app/TimeService/TimeService.apk
-bin/time_daemon:vendor/bin/time_daemon
+bin/time_daemon
 -vendor/lib/libtime_genoff.so
 -vendor/lib/libTimeService.so
 -vendor/lib64/libtime_genoff.so
 -vendor/lib64/libTimeService.so
+
+# Protobuff
+vendor/lib64/libprotobuf-cpp-fool.so
+vendor/lib64/libprotobuf-cpp-late.so
 
 # Widevine - op3
 vendor/lib/libWVStreamControlAPI_L3.so|3bfb950f01c51430aeefdf9850301cba8e56645a
