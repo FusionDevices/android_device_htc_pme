@@ -34,8 +34,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Default root Method := supersu/magisk
 # DEFAULT_ROOT_METHOD :=
 
-#$(call inherit-product, frameworks/native/build/phone-xxxhdpi-4096-dalvik-heap.mk)
-#$(call inherit-product, frameworks/native/build/phone-xxxhdpi-4096-hwui-memory.mk)
+$(call inherit-product, frameworks/native/build/phone-xxxhdpi-4096-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xxxhdpi-4096-hwui-memory.mk)
 
 # Permissions
 PRODUCT_COPY_FILES += \
