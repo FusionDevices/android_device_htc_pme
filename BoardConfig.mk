@@ -152,9 +152,6 @@ TARGET_PER_MGR_ENABLED := true
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
-# Encryption
-TARGET_HW_DISK_ENCRYPTION := true
-
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -230,6 +227,65 @@ WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_AP      := "/system/etc/firmware/fw_bcm4359_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P     := "/system/etc/firmware/fw_bcm4359.bin"
 WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/fw_bcm4359.bin"
+
+# TWRP specific build flags
+TW_THEME := portrait_hdpi
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := false
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+#TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+#TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/soc/6a00000.ssusb/6a00000.dwc3/gadget/lun%d/file"
+#TW_BRIGHTNESS_PATH := "/sys/devices/soc/900000.qcom\x2cmdss_mdp/900000.qcom\x2cmdss_mdp:qcom\x2cmdss_fb_primary/leds/lcd-backlight/brightness"
+#TW_MAX_BRIGHTNESS := 255
+#TW_DEFAULT_BRIGHTNESS := 149
+#TW_SCREEN_BLANK_ON_BOOT := true
+#TARGET_USES_LOGD := true
+
+TW_IGNORE_MISC_WIPE_DATA := true
+
+# Symlink extra files
+# TW_RECOVERY_ADDITIONAL_RELINK_FILES := $(OUT)/system/xbin/strace $(OUT)/recovery/root/sbin/twrpdec
+# TW_RECOVERY_ADDITIONAL_RELINK_FILES := $(OUT)/recovery/root/system/bin/sh $(OUT)/recovery/root/sbin/sh
+
+# exFAT drivers included in the kernel
+TW_NO_EXFAT_FUSE := false
+
+# NTFS filesystem
+TW_INCLUDE_NTFS_3G := fase
+
+# No love for the wicked (device ships with M)
+TW_EXCLUDE_SUPERSU := true
+
+# Asian region languages
+TW_EXTRA_LANGUAGES := fase
+
+# Encryption support
+TW_INCLUDE_CRYPTO := true
+TW_CRYPTO_USE_SYSTEM_VOLD := qseecomd
+TARGET_HW_DISK_ENCRYPTION := true
+#TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+
+# Debug flags
+TWRP_INCLUDE_LOGCAT := false
+
+# Init properties from bootloader version, ex. model info
+TARGET_INIT_VENDOR_LIB := libinit_pme
+TARGET_RECOVERY_DEVICE_MODULES := chargeled # strace twrpdec libinit_pme
+TARGET_UNIFIED_DEVICE := true
+
+# Extra
+TW_HAS_DOWNLOAD_MODE := true
+TW_NO_USB_STORAGE := false
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+BOARD_SUPPRESS_SECURE_ERASE := true
+# TW_INPUT_BLACKLIST := "hbtp_vm"
+TW_NO_LEGACY_PROPS := false # N=true O=false
+
+# TWRP Extra Flags:
+BOARD_SUPPRESS_SECURE_ERASE := true
+BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
+
 
 # inherit from the proprietary version
 -include vendor/htc/pme/BoardConfigVendor.mk

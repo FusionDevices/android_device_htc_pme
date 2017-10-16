@@ -1,0 +1,26 @@
+import init.recovery.htc_decrypt.rc
+
+on init
+    # Load Tuxera exfat module
+    insmod /system/lib/modules/texfat.ko
+
+on offmode_charging
+    start detect_key
+    start offmode_charging
+
+on boot
+    start chargeled
+
+service chargeled /sbin/chargeled
+    disabled
+    seclabel u:r:healthd:s0
+
+service detect_key /sbin/detect_key
+    disabled
+    seclabel u:r:healthd:s0
+    oneshot
+
+service offmode_charging /sbin/offmode_charging
+    disabled
+    seclabel u:r:healthd:s0
+

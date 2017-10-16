@@ -34,6 +34,12 @@ $(call inherit-product, device/htc/pme/device.mk)
 # Inherit some common AOSP stuff.
 # $(call inherit-product, vendor/aosp/common.mk)
 
+PRODUCT_COPY_FILES += device/htc/pme/twrp.fstab:recovery/root/etc/twrp.fstab
+
+# Time Zone data for Recovery
+PRODUCT_COPY_FILES += \
+    bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
+
 PRODUCT_DEVICE := pme
 PRODUCT_NAME := pme
 PRODUCT_BRAND := HTC
