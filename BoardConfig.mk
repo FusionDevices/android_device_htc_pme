@@ -49,7 +49,7 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Use Snapdragon LLVM, if available
-#TARGET_USE_SDCLANG := true
+TARGET_USE_SDCLANG := true
 # USE_CLANG_PLATFORM_BUILD := true
 
 # Bootloader
