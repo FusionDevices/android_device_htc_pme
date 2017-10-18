@@ -213,6 +213,10 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.firmware_links.sh
 
+# Variant linking script
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/releasetools/variants.sh:install/bin/variants.sh
+
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/synaptics_dsx.idc:system/usr/idc/synaptics_dsx.idc
