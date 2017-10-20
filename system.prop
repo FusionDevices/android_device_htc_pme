@@ -82,7 +82,6 @@ audio.offload.multiple.enabled=false
 
 # Bluetooth
 ro.bt.bdaddr_path=/sys/module/htc_bdaddress/parameters/bdaddress
-persist.bt.enableAptXHD=true
 service.brcm.bt.wbs = 1
 ro.htc.bluetooth.uart_dump = /sys/kernel/debug/ipc_logging/7570000.uart/log
 htc.scanrecorder = 1
@@ -272,5 +271,5 @@ persist.sys.wfd.virtual=0
 #sdm.debug.downscale_external=1
 
 # Enable ADB at boot time for debugging:
-persist.service.adb.enable=1                                                    
+persist.service.adb.enable=1
 persist.service.debuggable=1

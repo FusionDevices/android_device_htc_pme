@@ -108,6 +108,9 @@ PRODUCT_PACKAGES += \
 		android.hardware.bluetooth@1.0-service \
 		libbt-vendor
 
+# AptX/AptX HD bluetooth codec
+APTX_HD := true
+
 # Camera
 PRODUCT_PACKAGES += \
     libshim_camera \
