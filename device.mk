@@ -124,6 +124,9 @@ PRODUCT_PACKAGES += \
 # AptX/AptX HD bluetooth codec
 APTX_HD := true
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl-pme \
