@@ -212,6 +212,9 @@ ro.qti.sensors.mot_detect=false
 # SSC/SLPI sensor daemon
 ro.qualcomm.ssc=true
 
+# Storage
+ro.sys.sdcardfs=false
+
 # Time-services
 persist.timed.enable=true
 
