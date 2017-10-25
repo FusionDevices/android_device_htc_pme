@@ -251,6 +251,10 @@ on post-fs-data
     # Create directory for TZ Apps
     mkdir /data/misc/qsee 0770 system system
 
+    # Create SWAP related dirs
+    mkdir /data/system/swap 0770 root system
+    chmod 2770 /data/system/swap
+
     # RIDL data
     mkdir /data/misc/SelfHost/ 0710 system shell
     mkdir /data/misc/SelfHost/QCLogs/ 2750 system shell
