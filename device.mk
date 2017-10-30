@@ -377,10 +377,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-# VNDK-SP:
-PRODUCT_PACKAGES += \
-		vndk-sp
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/filter_ie:system/etc/filter_ie \
     $(LOCAL_PATH)/configs/calibration:system/etc/calibration \
