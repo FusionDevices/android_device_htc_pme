@@ -309,9 +309,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
     android.hardware.power@1.0-service \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service \
     libshim_power \
     power.msm8996 \
     thermal.msm8996
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal-engine.conf:system/vendor/etc/thermal-engine.conf
 
 # Dumpstate
 PRODUCT_PACKAGES += \
