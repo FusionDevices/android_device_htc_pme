@@ -44,3 +44,7 @@ PRODUCT_RELEASE_NAME := pme
 TARGET_VENDOR := htc
 
 $(call inherit-product-if-exists, vendor/htc/pme/pme-vendor.mk)
+
+# Device Fingerprint
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT=htc/pmewl_00617/htc_pmewl:7.0/NRD90M/831921.8:user/release-keys
