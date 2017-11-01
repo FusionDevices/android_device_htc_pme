@@ -827,12 +827,6 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     oneshot
     writepid /dev/cpuset/system-background/tasks
 
-# Debugging loggy
-service loggy /system/bin/sh  /loggy.sh
-    class main
-    user root
-    oneshot
-
 # Firmware linking to /firmware/image
 service fwnk-adsp  /system/bin/sh /init.qcom.firmware_links.sh /firmware/adsp /firmware/image "adsp*" adsp
     class firmware-link
