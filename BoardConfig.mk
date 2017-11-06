@@ -195,6 +195,7 @@ USE_DEVICE_SPECIFIC_GPS := true
 
 # HIDL
 DEVICE_MANIFEST_FILE := device/htc/pme/manifest.xml
+DEVICE_MATRIX_FILE   := device/htc/pme/compatibility_matrix.xml
 
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
