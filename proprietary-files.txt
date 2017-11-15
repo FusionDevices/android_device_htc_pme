@@ -646,6 +646,7 @@ lib/vendor.qti.gnss@1.0.so|8fb1b90a7a07ca18822f075fc8b1a62526c55c0c
 lib64/vendor.qti.gnss@1.0.so|f1b161f283b4d0c2b789c20624f9ef91c8ffb0fa
 vendor/bin/hw/vendor.qti.gnss@1.0-service|424a63e998c4e4386b25493b5c37f18a00facbba
 vendor/bin/loc_launcher|8da6579e6b4fa91f3af05c0e233678730197d38a
+vendor/bin/lowi-server|e5b56ca0dfb505ba3623f4d5ed31b1b105fe3427
 vendor/bin/slim_daemon|bf045642321394f5fc92d8d373877cf103031ad5
 vendor/bin/xtra-daemon|8dac3ae4b8d1be18b40763861f9440b6278ff902
 vendor/etc/init/vendor.qti.gnss@1.0-service.rc|ba25c7c3e8c3ef52b15f7f420012c80a4489a784
