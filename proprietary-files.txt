@@ -1,5 +1,5 @@
 # ADSP
-bin/adsprpcd
+vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libadsp_hvx_callback_skel.so
 vendor/lib/libadsp_hvx_stub.so
@@ -496,7 +496,7 @@ vendor/lib64/libscveTextRecoPostProcessing.so
 vendor/lib64/libscveObjectSegmentation_stub.so
 
 # CNE
-bin/cnd
+vendor/bin/cnd
 etc/cne/SwimConfig.xml
 etc/cne/andsfCne.xml
 etc/cne/wqeclient/ATT/ATT_profile1.xml
@@ -534,7 +534,7 @@ vendor/lib64/libwqe.so
 vendor/lib64/libxml.so|b6492360bade2e8bbca975b26ce7e168d8fc6a4a
 
 # DPM
-bin/dpmd
+vendor/bin/dpmd
 etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
 etc/permissions/com.qti.dpmframework.xml
@@ -555,7 +555,7 @@ vendor/lib64/libdpmnsrm.so
 vendor/lib64/libdpmtcm.so
 
 # DRM
-bin/qseecomd
+vendor/bin/qseecomd
 vendor/lib/libQSEEComAPI.so
 vendor/lib64/lib-sec-disp.so
 vendor/lib64/libGPreqcancel.so
@@ -762,7 +762,7 @@ etc/firmware/a530v3_seq.fw2:etc/firmware/a530v3_seq.fw2
 etc/firmware/a540_gpmu.fw2:etc/firmware/a540_gpmu.fw2
 
 # HTC charger
-bin/htcdcpd
+vendor/bin/htcdcpd
 
 # Mixed firmware
 etc/firmware/BCM4349B1_002.002.014.0051.0061.hcd
@@ -807,7 +807,7 @@ etc/firmware/usb_typec_otp_ad.img
 vendor/bin/hvdcp_opti
 
 # IPA
-bin/ipacm-diag
+vendor/bin/ipacm-diag
 
 # Keymaster
 etc/firmware/keymaste.b00
@@ -878,9 +878,9 @@ vendor/lib64/libhtc_common.so
 vendor/firmware/libpn548_fw.so
 
 # Perf
-bin/energy-awareness
-bin/iop
-bin/msm_irqbalance
+vendor/bin/energy-awareness
+vendor/bin/iop
+vendor/bin/msm_irqbalance
 vendor/lib/libqti-iop.so
 vendor/lib64/libqti-iop.so
 vendor/bin/perfd|43db5fcd0257da0230cceae685a9f3d92bef40ca
@@ -897,8 +897,8 @@ vendor/etc/perf-profile0.conf
 -etc/permissions/com.qualcomm.qti.Performance.xml
 
 # Peripheral manager
-bin/pm-proxy
-bin/pm-service
+vendor/bin/pm-proxy
+vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
@@ -916,7 +916,7 @@ customize/MNSprop/default.prop
 customize/mns_map.xml
 
 # QMI
-bin/irsc_util
+vendor/bin/irsc_util
 etc/permissions/qti_permissions.xml
 vendor/bin/pd-mapper
 vendor/lib/libdiag.so
@@ -957,10 +957,10 @@ vendor/lib64/libqmiservices_ext.so
 vendor/lib64/libsmemlog.so
 
 # Radio
-bin/netmgrd
-bin/radish
-bin/rmt_storage
-bin/tftp_server
+vendor/bin/netmgrd
+vendor/bin/radish
+vendor/bin/rmt_storage
+vendor/bin/tftp_server
 etc/data/dsi_config.xml
 etc/data/netmgr_config.xml
 etc/permissions/qcrilhook.xml
@@ -983,10 +983,10 @@ vendor/lib64/libsystem_health_mon.so
 vendor/qcril.db
 
 # Radio - IMS
-bin/ims_rtp_daemon
-bin/imscmservice
-bin/imsdatadaemon
-bin/imsqmidaemon
+vendor/bin/ims_rtp_daemon
+vendor/bin/imscmservice
+vendor/bin/imsdatadaemon
+vendor/bin/imsqmidaemon
 vendor/lib64/lib-dplmedia.so
 vendor/lib64/lib-ims-rcscmjni.so
 vendor/lib64/lib-imsSDP.so
@@ -1012,7 +1012,7 @@ vendor/lib64/librcc.so
 vendor/lib64/libvoice-svc.so
 
 # Sensors
-bin/sensors.qcom
+vendor/bin/sensors.qcom
 etc/sensors/sensor_def_qcomdev.conf
 lib/hw/sensors.msm8996.so
 lib64/hw/sensors.msm8996.so
