@@ -809,8 +809,8 @@ service tftp_server /system/bin/tftp_server
     user root
     writepid /dev/cpuset/system-background/tasks
 
-service time_daemon /system/bin/time_daemon
-    class late_start
+service time_daemon /vendor/bin/time_daemon
+    class core
     user root
     group root
     writepid /dev/cpuset/system-background/tasks
