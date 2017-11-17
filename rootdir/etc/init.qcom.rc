@@ -596,12 +596,6 @@ service adsprpcd /vendor/bin/adsprpcd
     group media
     writepid /dev/cpuset/foreground/tasks
 
-service audiod /system/bin/audiod
-   class late_start
-   user system
-   group system
-    writepid /dev/cpuset/foreground/tasks
-
 service charger /charger
     class charger
     seclabel u:r:charger:s0
