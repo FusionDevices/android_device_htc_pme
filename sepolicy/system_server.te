@@ -10,7 +10,6 @@ allow system_server perfd:unix_stream_socket connectto;
 
 allow system_server storage_stub_file:dir getattr;
 allow system_server adbsecure_prop:file read;
-allow system_server dalvikcache_data_file:file {read write};
 allow system_server theme_data_file:file read;
 
 allow system_server adbsecure_prop:file { open getattr read };

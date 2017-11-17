@@ -1,4 +1,1 @@
 #============= sdcardd ==============
-allow sdcardd unlabeled:dir { add_name create getattr open read write search };
-allow sdcardd unlabeled:file { getattr create open read write };
-allow sdcardd unlabeled:filesystem getattr;
