@@ -5,3 +5,12 @@ allow init proc_kernel_sched:file rw_file_perms;
 #============= init ==============
 allow init vfat:dir { open read search };
 allow init vfat:file { open read };
+
+#============= init ==============
+allow init fpc1155_device:chr_file write;
+allow init hwservicemanager:binder { call transfer };
+allow init ion_device:chr_file ioctl;
+allow init surfaceflinger:process signull;
+allow init system_data_file:sock_file write;
+allow init system_server:binder call;
+allow init tee_device:chr_file { ioctl write };
