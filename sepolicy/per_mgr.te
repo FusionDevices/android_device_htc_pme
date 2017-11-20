@@ -5,3 +5,4 @@ allow per_mgr self:capability net_raw;
 
 #============= per_mgr ==============
 allow per_mgr block_device:dir search;
+allow per_mgr vfat:file { open read };
