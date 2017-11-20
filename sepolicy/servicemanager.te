@@ -1,0 +1,7 @@
+#============= servicemanager ==============
+allow servicemanager hal_gnss_qti:dir search;
+allow servicemanager hal_gnss_qti:file { open read };
+allow servicemanager hal_gnss_qti:process getattr;
+allow servicemanager mm-qcamerad:dir search;
+allow servicemanager mm-qcamerad:file { open read };
+allow servicemanager mm-qcamerad:process getattr;
