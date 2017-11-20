@@ -23,6 +23,7 @@
 
 # Properties
 /system/vendor/bin/operator-properties      u:object_r:operator-properties_exec:s0
+/system/vendor/bin/perfd                    u:object_r:perfd_exec:s0
 
 # Radio
 /dev/radio(/.*)?                            u:object_r:radio_data_file:s0
