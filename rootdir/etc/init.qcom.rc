@@ -237,7 +237,7 @@ on post-fs-data
     mkdir /data/misc/iop 0770 root system
 
     # Create directory for time-services
-    mkdir /data/time/ 0700 system system
+    mkdir /data/vendor/time/ 0700 system system
 
     # Create directory for TZ Apps
     mkdir /data/misc/qsee 0770 system system
