@@ -1,51 +1,29 @@
 # Audio
-audio_hal.period_size=240
 af.fast_track_multiplier=2
 audio.ds1.metainfo.key=273
-dmid=-1286820014
-ro.qc.sdk.audio.fluencetype=fluence
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicerec=false
-persist.audio.fluence.speaker=true
-ro.audio.flinger_standbytime_ms=300
-tunnel.audio.encode=false
-audio.offload.disable=true
-#Buffer size in kbytes for compress offload playback
-audio.offload.buffer.size.kb=1024
-#Enable offload audio video playback by default
-audio.offload.video=true
-#Enable 16 bit PCM offload by default
-audio.offload.pcm.16bit.enable=false
-#Enable 24 bit PCM offload by default
-audio.offload.pcm.24bit.enable=false
-#Enable audio track offload by default
-audio.offload.track.enable=false
-#Enable music through deep buffer
 audio.deep_buffer.media=true
-#enable voice path for PCM VoIP by default
-use.voice.path.for.pcm.voip=true
-#Enable multi channel aac through offload
-audio.offload.multiaac.enable=false
-audio.offload.passthrough=false
-audio.offload.multiple.enabled=false
-# snapdragon value add features
-ro.qc.sdk.audio.ssr=false
-
-#Period size for ull playback & low latency record
-audio_hal.period_multiplier=2
-audio_hal.period_size=240
+audio.offload.disable=true
+audio.offload.video=true
+dmid=-1286820014
+persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicerec=false
+persist.vendor.audio.fluence.speaker=true
+ro.vendor.audio.sdk.fluencetype=fluence
+ro.vendor.audio.sdk.ssr=false
+vendor.audio.tunnel.encode=false
+vendor.audio.offload.buffer.size.kb=1024
+vendor.audio.offload.pcm.16bit.enable=false
+vendor.audio.offload.pcm.24bit.enable=false
+vendor.audio_hal.period_size=240
+vendor.audio.offload.multiaac.enable=false
+vendor.audio.offload.passthrough=false
+vendor.audio.offload.multiple.enabled=false
+vendor.audio.safx.pbe.enabled=true
+vendor.audio.parser.ip.buffer.size=262144
+vendor.voice.path.for.pcm.voip=true
 
 # system prop for NFC DT
 ro.nfc.port=I2C
-
-#enable dsp gapless mode by default
-audio.offload.gapless.enabled=false
-
-#enable pbe effects
-audio.safx.pbe.enabled=true
-
-#parser input buffer size(256kb) in byte stream mode
-audio.parser.ip.buffer.size=262144
 
 #ro.hdmi.enable=true
 #persist.speaker.prot.enable=false
