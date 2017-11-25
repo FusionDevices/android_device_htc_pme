@@ -412,6 +412,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     loggy.sh
 
+# VNDK-SP:
+PRODUCT_PACKAGES += \
+    vndk-sp
+
 # VR
 PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-impl \
