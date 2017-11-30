@@ -326,6 +326,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/vendor/etc/thermal-engine.conf
 
+PRODUCT_PROPERTY_OVERRIDES += ro.hardware.power=msm8996
+
 # Dumpstate
 PRODUCT_PACKAGES += \
     android.hardware.dumpstate@1.0-service.msm8996
