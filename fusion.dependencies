@@ -18,9 +18,9 @@
     "revision"    : "pf-o"
  },
  {
-    "remote"      : "voxpopuli",
-    "repository"  : "android_device_voxpopuli",
+    "remote"      : "fusion",
+    "repository"  : "PureFusionOS/android_device_voxpopuli",
     "target_path" : "device/voxpopuli",
-    "revision"    : "msm8996"
+    "revision"    : "pf-o-msm8996"
  }
 ]
