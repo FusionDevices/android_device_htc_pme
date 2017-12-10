@@ -133,6 +133,7 @@ PRODUCT_PACKAGES += \
 TARGET_USES_GOOGLE_CAMERA := true
 #TARGET_USES_OP_CAMERA := true
 TARGET_USES_SNAP_CAMERA := true
+
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
     cneapiclient \
@@ -155,6 +156,9 @@ PRODUCT_PACKAGES += \
     libjni_livedisplay \
     liboverlay \
     libtinyxml
+
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.0-service
 
 # DRM
 PRODUCT_PACKAGES += \
