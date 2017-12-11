@@ -71,15 +71,6 @@ ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=1024
 
-#Disable property for Dolby ds2
-#audio.dolby.ds2.enabled=false
-
-#Disable property for hard bypass
-#audio.dolby.ds2.hardbypass=false
-
-audio.offload.passthrough=false
-audio.offload.multiple.enabled=false
-
 # Bluetooth
 ro.bt.bdaddr_path=/sys/module/htc_bdaddress/parameters/bdaddress
 service.brcm.bt.wbs = 1
@@ -108,10 +99,6 @@ persist.ts.postmakeup=false
 persist.ts.rtmakeup=false
 Camera.no_navigation_bar=true
 persist.camera.tuning_spec=htc
-#camera2.portability.force_api=1
-
-#force HAL1 for below packages
-#camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 
 # Increase jpg quality to 100%
 ro.media.enc.jpeg.quality=100
@@ -140,14 +127,11 @@ dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 persist.data.qmi.adb_logmask=0
 
-# Factory Reset Protection *** KEEP OFF ***
-# ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
 # Fast charge
 persist.hvdcp.allow_opti=1
 
 #Simulate sdcard on /data/media
-#
+
 persist.fuse_sdcard=true
 
 # GPS
@@ -157,9 +141,6 @@ ro.gps.agps_provider=1
 
 # Low power for encoder
 vidc.debug.perf.mode=2
-
-# Media
-mm.enable.smoothstreaming=true
 
 # OMX
 persist.media.treble_omx=false
@@ -224,12 +205,8 @@ wifi.interface=wlan0
 #system prop for enabling/disabling Android XLAT
 persist.net.doxlat=false
 
-
 # For usb storage
 ro.usb_host = 1
-
-# Google Assistant
-ro.opa.eligible_device=true
 
 #system props for the MM modules
 media.stagefright.enable-player=true
@@ -257,16 +234,19 @@ persist.hwc.enable_vds=1
 
 #Enable stm events
 ro.dbg.coresight.config=stm_events
+
 #property to enable fingerprint
 persist.qfp=false
 
 #default pd_enable value
 persist.sys.pd_enable=0
+
 #Disable rotator split feature
 sdm.debug.disable_rotator_split=1
 
 #property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1
+
 ##property to choose between virtual/external wfd display
 persist.sys.wfd.virtual=0
 
