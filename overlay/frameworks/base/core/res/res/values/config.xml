@@ -431,15 +431,6 @@
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
 
-    <!-- Control the behavior when the user long presses the home button.
-            0 - Nothing
-            1 - Launch all apps intent
-            2 - Launch assist intent
-         This needs to match the constants in
-         policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
-    -->
-    <integer name="config_longPressOnHomeBehavior">2</integer>
-
     <!-- Use ERI text for network name on CDMA LTE -->
     <bool name="config_LTE_eri_for_network_name">false</bool>
 
@@ -450,25 +441,6 @@
          NOTE: This requires additional hardware-specific code. -->
     <add-resource type="bool" name="config_uiBlurEnabled"></add-resource>
     <bool name="config_uiBlurEnabled">true</bool>
-
-
-    <!-- Values for USB port setting. in format of bootmode:current function:new function -->
-    <string-array translatable="false" name="config_oemUsbModeOverride">
-        <item>"hw-factory:mtp:manufacture,adb"</item>
-        <item>"hw-factory:mtp,adb:manufacture,adb"</item>
-        <item>"hw-factory:ptp:manufacture,adb"</item>
-        <item>"hw-factory:ptp,adb:manufacture,adb"</item>
-        <item>"hw-factory:rndis:manufacture,adb"</item>
-        <item>"hw-factory:rndis,adb:manufacture,adb"</item>
-        <item>"hw-factory:adb:manufacture,adb"</item>
-        <item>"bp-tools:mtp:diag,serial_smd,rmnet_ipa,adb"</item>
-        <item>"bp-tools:mtp,adb:diag,serial_smd,rmnet_ipa,adb"</item>
-        <item>"bp-tools:ptp:diag,serial_smd,rmnet_ipa,adb"</item>
-        <item>"bp-tools:ptp,adb:diag,serial_smd,rmnet_ipa,adb"</item>
-        <item>"bp-tools:adb:diag,serial_smd,rmnet_ipa,adb"</item>
-        <item>"bp-tools:rndis:rndis,serial,adb"</item>
-        <item>"bp-tools:rndis,adb:rndis,serial,adb"</item>
-    </string-array>
 
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
