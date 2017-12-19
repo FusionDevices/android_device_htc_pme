@@ -607,7 +607,7 @@ service dpmd /vendor/bin/dpmd
     group system readproc
     writepid /dev/cpuset/system-background/tasks
 
-service hvdcp_opti /system/vendor/bin/hvdcp_opti
+service hvdcp_opti /vendor/bin/hvdcp_opti
     class main
     user root
     group root
@@ -659,7 +659,7 @@ service ipacm-diag /vendor/bin/ipacm-diag
     group net_admin diag
     writepid /dev/cpuset/system-background/tasks
 
-service ipacm /system/vendor/bin/ipacm
+service ipacm /vendor/bin/ipacm
     class main
     user net_admin
     group net_admin inet
@@ -709,7 +709,7 @@ on property:init.svc.per_mgr=running
 on property:sys.shutdown.requested=*
     stop per_proxy
 
-service perfd /system/vendor/bin/perfd
+service perfd /vendor/bin/perfd
    class main
    user root
    group root readproc system
@@ -731,7 +731,7 @@ service energy-awareness /vendor/bin/energy-awareness
     group system
     oneshot
 
-service ppd /system/vendor/bin/mm-pp-dpps
+service ppd /vendor/bin/mm-pp-dpps
     class late_start
     user system
     group system graphics
@@ -757,7 +757,7 @@ on property:init.svc.zygote=running
 on property:init.svc.zygote=restarting
     stop ppd
 
-service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
+service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
@@ -780,7 +780,7 @@ service qseecomd /vendor/bin//qseecomd
     group root
     writepid /dev/cpuset/system-background/tasks
 
-service qti /system/vendor/bin/qti
+service qti /vendor/bin/qti
     class main
     user radio
     group radio diag usb
@@ -797,7 +797,7 @@ service sensors /vendor/bin/sensors.qcom
     group root
     writepid /dev/cpuset/system-background/tasks
 
-service thermal-engine /system/vendor/bin/thermal-engine
+service thermal-engine /vendor/bin/thermal-engine
     class main
     user root
     socket thermal-send-client stream 0666 system system
@@ -876,7 +876,7 @@ on property:sys.boot_completed=1
 on property:gsm.sim.operator.numeric=*
     start op-prop
 
-service op-prop /system/vendor/bin/operator-properties
+service op-prop /vendor/bin/operator-properties
     class main
     disabled
     oneshot
