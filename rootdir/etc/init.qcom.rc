@@ -880,4 +880,3 @@ service op-prop /system/vendor/bin/operator-properties
     class main
     disabled
     oneshot
-vendor/bin/
