@@ -137,6 +137,7 @@ on post-fs-data
 
     # Create directory used by media clients
     mkdir /data/vendor/media 0770 mediacodec media
+    mkdir /data/misc/media 0770 mediacodec media
 
     # Create directory used for camera
     mkdir /data/vendor/camera 0770 camera camera
