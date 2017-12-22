@@ -294,11 +294,16 @@ on boot
     # Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
 
-    # Set rfkill permissions
-    chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
-    chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
+
+    # Configure bluetooth
+    chmod 0660 /proc/bluetooth/sleep/lpm
+    chmod 0660 /proc/bluetooth/sleep/btwrite
     chmod 0660 /sys/class/rfkill/rfkill0/state
     chmod 0660 /sys/class/rfkill/rfkill0/type
+    chown bluetooth bluetooth /proc/bluetooth/sleep/lpm
+    chown bluetooth bluetooth /proc/bluetooth/sleep/btwrite
+    chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
+    chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
 
     # Bluetooth serial bus
     chown bluetooth bluetooth /dev/ttyHS0
