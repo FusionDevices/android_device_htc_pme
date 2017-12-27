@@ -660,19 +660,6 @@ service imsqmidaemon /vendor/bin/imsqmidaemon
     group radio net_raw log diag
     writepid /dev/cpuset/system-background/tasks
 
-service ipacm-diag /vendor/bin/ipacm-diag
-    class main
-    user system
-    socket ipacm_log_file dgram 660 system net_admin
-    group net_admin diag
-    writepid /dev/cpuset/system-background/tasks
-
-service ipacm /vendor/bin/ipacm
-    class main
-    user net_admin
-    group net_admin inet
-    writepid /dev/cpuset/system-background/tasks
-
 service irsc_util /vendor/bin/irsc_util "/etc/sec_config"
     class main
     user root
