@@ -1,4 +1,4 @@
-AOSNP/CAF Device Tree for HTC 10 (pme)
+Pure Fusion OS AOSP Device Tree for HTC 10 (pme)
 ===========================================
 
 The HTC 10 (codenamed _"pme"_) is a flagship smartphone from HTC.
@@ -17,6 +17,6 @@ Battery | Li-Ion 3000 mAh battery
 Display | 1440 x 2560 pixels, 5.2 inches (~565 ppi pixel density)
 Camera  | 12 MP, 4000 x 3000 pixels, autofocus, LED flash, OIS
 
-Copyright 2017 - The Android Open Source Nebula Project.
+Copyright 2017 - Pure Fusion OS
 
 ![HTC 10](http://cdn2.gsmarena.com/vv/pics/htc/htc-10-5.jpg "HTC 10")
