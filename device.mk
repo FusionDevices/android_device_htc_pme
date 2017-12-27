@@ -353,8 +353,10 @@ PRODUCT_PACKAGES += \
 
 # Ril
 PRODUCT_PACKAGES += \
+    android.hardware.broadcastradio@1.0-impl \
     libhtcril_db \
     librmnetctl \
+    rmnetcli \
     libshim_ril \
     libxml2
 
