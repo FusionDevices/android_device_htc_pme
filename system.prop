@@ -5,8 +5,6 @@ dmid=-1286820014
 # system prop for NFC DT
 ro.nfc.port=I2C
 
-#ro.hdmi.enable=true
-
 #property to enable WFD WL solution
 ro.vendor.wl_library=libqti-wl.so
 
@@ -207,9 +205,6 @@ persist.debug.wfd.enable=1
 
 ##property to choose between virtual/external wfd display
 persist.sys.wfd.virtual=0
-
-#property to enable sde downscale feature for external display
-#sdm.debug.downscale_external=1
 
 # Enable ADB at boot time for debugging:
 persist.service.adb.enable=1

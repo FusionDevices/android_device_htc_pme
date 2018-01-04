@@ -34,9 +34,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=23
 
-# Default root Method := supersu/magisk
-# DEFAULT_ROOT_METHOD :=
-
 $(call inherit-product, frameworks/native/build/phone-xxxhdpi-4096-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxxhdpi-4096-hwui-memory.mk)
 
@@ -95,8 +92,6 @@ PRODUCT_PACKAGES += \
     libcameraface \
     libshim_camera
 
-TARGET_USES_GOOGLE_CAMERA := true
-#TARGET_USES_OP_CAMERA := true
 TARGET_USES_SNAP_CAMERA := true
 
 # Connectivity Engine support (CNE)
@@ -267,10 +262,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
-# Enable build to use ffmpeg
-WITH_FFMPEG := true
-DOLBY_ENABLE := true
-
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -368,10 +359,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/calibration:system/etc/calibration \
     $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
-
-# Debug Loggy
-PRODUCT_PACKAGES += \
-    loggy.sh
 
 # VNDK-SP:
 PRODUCT_PACKAGES += \

@@ -769,7 +769,7 @@ service qmuxd /system/bin/qmuxd
     group radio audio bluetooth gps diag
     writepid /dev/cpuset/system-background/tasks
 
-service qseecomd /vendor/bin//qseecomd
+service qseecomd /vendor/bin/qseecomd
     class core
     user root
     group root
@@ -824,12 +824,6 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
     writepid /dev/cpuset/system-background/tasks
-
-# Debugging loggy
-service loggy /system/bin/sh  /loggy.sh
-    class main
-    user root
-    oneshot
 
 # Firmware linking to /firmware/image
 service fwnk-adsp  /system/bin/sh /init.qcom.firmware_links.sh /firmware/adsp /firmware/image "adsp*" adsp
