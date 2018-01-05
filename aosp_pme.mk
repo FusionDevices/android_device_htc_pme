@@ -20,6 +20,8 @@ WITH_OFFICIALOTA := true
 # Support Beta OTA Opt-in (Requires additional ota xml)
 BETA_OTA := true
 
+TARGET_TRICK_SELINUX := true
+
 # Include pure telephony configuration
 $(call inherit-product, vendor/pure/configs/pure_phone.mk)
 
