@@ -84,7 +84,8 @@ PRODUCT_PACKAGES += \
 APTX_HD := true
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf \
+    $(LOCAL_PATH)/bluetooth/iop_bt.db:system/etc/bluetooth/iop_bt.db
 
 # Camera
 PRODUCT_PACKAGES += \
