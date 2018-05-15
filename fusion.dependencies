@@ -1,0 +1,20 @@
+[
+  {
+    "remote"      : "github",
+    "repository"  : "DevHTC10/caf_pme_msm8996_kernel",
+    "target_path" : "kernel/htc/msm8996",
+    "revision"    : "MASTER_7400-HTC10"
+  },
+ {
+    "remote"      : "github",
+    "repository"  : "LineageOS/android_device_qcom_common",
+    "target_path" : "device/qcom/common",
+    "revision"    : "lineage-15.1"
+ },
+ {
+    "remote"      : "fusion",
+    "repository"  : "OctopusParty/proprietary_vendor_htc",
+    "target_path" : "vendor/htc",
+    "revision"    : "pf-o-mr1"
+ }
+]
